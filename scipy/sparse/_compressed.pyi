@@ -1,8 +1,34 @@
-from ._base import SparseEfficiencyWarning as SparseEfficiencyWarning, issparse as issparse, sparray as sparray
+from ._base import (
+    SparseEfficiencyWarning as SparseEfficiencyWarning,
+    issparse as issparse,
+    sparray as sparray,
+)
 from ._data import _data_matrix, _minmax_mixin
 from ._index import IndexMixin as IndexMixin
-from ._sparsetools import csr_column_index1 as csr_column_index1, csr_column_index2 as csr_column_index2, csr_row_index as csr_row_index, csr_row_slice as csr_row_slice, csr_sample_offsets as csr_sample_offsets, csr_sample_values as csr_sample_values, csr_todense as csr_todense, get_csr_submatrix as get_csr_submatrix
-from ._sputils import check_shape as check_shape, downcast_intp_index as downcast_intp_index, get_sum_dtype as get_sum_dtype, getdtype as getdtype, is_pydata_spmatrix as is_pydata_spmatrix, isdense as isdense, isintlike as isintlike, isscalarlike as isscalarlike, isshape as isshape, to_native as to_native, upcast as upcast, upcast_char as upcast_char
+from ._sparsetools import (
+    csr_column_index1 as csr_column_index1,
+    csr_column_index2 as csr_column_index2,
+    csr_row_index as csr_row_index,
+    csr_row_slice as csr_row_slice,
+    csr_sample_offsets as csr_sample_offsets,
+    csr_sample_values as csr_sample_values,
+    csr_todense as csr_todense,
+    get_csr_submatrix as get_csr_submatrix,
+)
+from ._sputils import (
+    check_shape as check_shape,
+    downcast_intp_index as downcast_intp_index,
+    get_sum_dtype as get_sum_dtype,
+    getdtype as getdtype,
+    is_pydata_spmatrix as is_pydata_spmatrix,
+    isdense as isdense,
+    isintlike as isintlike,
+    isscalarlike as isscalarlike,
+    isshape as isshape,
+    to_native as to_native,
+    upcast as upcast,
+    upcast_char as upcast_char,
+)
 from _typeshed import Incomplete
 from scipy._lib._util import copy_if_needed as copy_if_needed
 
@@ -10,7 +36,13 @@ class _cs_matrix(_data_matrix, _minmax_mixin, IndexMixin):
     data: Incomplete
     indices: Incomplete
     indptr: Incomplete
-    def __init__(self, arg1, shape: Incomplete | None = None, dtype: Incomplete | None = None, copy: bool = False) -> None: ...
+    def __init__(
+        self,
+        arg1,
+        shape: Incomplete | None = None,
+        dtype: Incomplete | None = None,
+        copy: bool = False,
+    ) -> None: ...
     def check_format(self, full_check: bool = True) -> None: ...
     def __eq__(self, other): ...
     def __ne__(self, other): ...
@@ -22,9 +54,16 @@ class _cs_matrix(_data_matrix, _minmax_mixin, IndexMixin):
     def diagonal(self, k: int = 0): ...
     def maximum(self, other): ...
     def minimum(self, other): ...
-    def sum(self, axis: Incomplete | None = None, dtype: Incomplete | None = None, out: Incomplete | None = None): ...
+    def sum(
+        self,
+        axis: Incomplete | None = None,
+        dtype: Incomplete | None = None,
+        out: Incomplete | None = None,
+    ): ...
     def tocoo(self, copy: bool = True): ...
-    def toarray(self, order: Incomplete | None = None, out: Incomplete | None = None): ...
+    def toarray(
+        self, order: Incomplete | None = None, out: Incomplete | None = None
+    ): ...
     def eliminate_zeros(self) -> None: ...
     @property
     def has_canonical_format(self) -> bool: ...

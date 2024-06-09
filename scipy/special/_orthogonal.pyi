@@ -1,14 +1,70 @@
 import numpy as np
 from _typeshed import Incomplete
 
-__all__ = ['legendre', 'chebyt', 'chebyu', 'chebyc', 'chebys', 'jacobi', 'laguerre', 'genlaguerre', 'hermite', 'hermitenorm', 'gegenbauer', 'sh_legendre', 'sh_chebyt', 'sh_chebyu', 'sh_jacobi', 'roots_legendre', 'roots_chebyt', 'roots_chebyu', 'roots_chebyc', 'roots_chebys', 'roots_jacobi', 'roots_laguerre', 'roots_genlaguerre', 'roots_hermite', 'roots_hermitenorm', 'roots_gegenbauer', 'roots_sh_legendre', 'roots_sh_chebyt', 'roots_sh_chebyu', 'roots_sh_jacobi', 'p_roots', 't_roots', 'u_roots', 'c_roots', 's_roots', 'j_roots', 'l_roots', 'la_roots', 'h_roots', 'he_roots', 'cg_roots', 'ps_roots', 'ts_roots', 'us_roots', 'js_roots']
+__all__ = [
+    "legendre",
+    "chebyt",
+    "chebyu",
+    "chebyc",
+    "chebys",
+    "jacobi",
+    "laguerre",
+    "genlaguerre",
+    "hermite",
+    "hermitenorm",
+    "gegenbauer",
+    "sh_legendre",
+    "sh_chebyt",
+    "sh_chebyu",
+    "sh_jacobi",
+    "roots_legendre",
+    "roots_chebyt",
+    "roots_chebyu",
+    "roots_chebyc",
+    "roots_chebys",
+    "roots_jacobi",
+    "roots_laguerre",
+    "roots_genlaguerre",
+    "roots_hermite",
+    "roots_hermitenorm",
+    "roots_gegenbauer",
+    "roots_sh_legendre",
+    "roots_sh_chebyt",
+    "roots_sh_chebyu",
+    "roots_sh_jacobi",
+    "p_roots",
+    "t_roots",
+    "u_roots",
+    "c_roots",
+    "s_roots",
+    "j_roots",
+    "l_roots",
+    "la_roots",
+    "h_roots",
+    "he_roots",
+    "cg_roots",
+    "ps_roots",
+    "ts_roots",
+    "us_roots",
+    "js_roots",
+]
 
 class orthopoly1d(np.poly1d):
     weights: Incomplete
     weight_func: Incomplete
     limits: Incomplete
     normcoef: Incomplete
-    def __init__(self, roots, weights: Incomplete | None = None, hn: float = 1.0, kn: float = 1.0, wfunc: Incomplete | None = None, limits: Incomplete | None = None, monic: bool = False, eval_func: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        roots,
+        weights: Incomplete | None = None,
+        hn: float = 1.0,
+        kn: float = 1.0,
+        wfunc: Incomplete | None = None,
+        limits: Incomplete | None = None,
+        monic: bool = False,
+        eval_func: Incomplete | None = None,
+    ) -> None: ...
     def __call__(self, v): ...
 
 def roots_jacobi(n, alpha, beta, mu: bool = False): ...

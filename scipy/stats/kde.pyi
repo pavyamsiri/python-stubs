@@ -1,4 +1,21 @@
-__all__ = ['gaussian_kde', 'linalg', 'logsumexp', 'check_random_state', 'atleast_2d', 'reshape', 'newaxis', 'exp', 'ravel', 'power', 'atleast_1d', 'squeeze', 'sum', 'transpose', 'cov', 'gaussian_kernel_estimate']
+__all__ = [
+    "gaussian_kde",
+    "linalg",
+    "logsumexp",
+    "check_random_state",
+    "atleast_2d",
+    "reshape",
+    "newaxis",
+    "exp",
+    "ravel",
+    "power",
+    "atleast_1d",
+    "squeeze",
+    "sum",
+    "transpose",
+    "cov",
+    "gaussian_kernel_estimate",
+]
 
 # Names in __all__ with no definition:
 #   atleast_1d

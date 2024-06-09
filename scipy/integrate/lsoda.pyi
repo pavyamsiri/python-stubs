@@ -1,4 +1,4 @@
-__all__ = ['lsoda']
+__all__ = ["lsoda"]
 
 # Names in __all__ with no definition:
 #   lsoda

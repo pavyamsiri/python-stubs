@@ -1,4 +1,23 @@
-__all__ = ['toeplitz', 'circulant', 'hankel', 'hadamard', 'leslie', 'kron', 'block_diag', 'companion', 'helmert', 'hilbert', 'invhilbert', 'pascal', 'invpascal', 'dft', 'fiedler', 'fiedler_companion', 'convolution_matrix', 'as_strided']
+__all__ = [
+    "toeplitz",
+    "circulant",
+    "hankel",
+    "hadamard",
+    "leslie",
+    "kron",
+    "block_diag",
+    "companion",
+    "helmert",
+    "hilbert",
+    "invhilbert",
+    "pascal",
+    "invpascal",
+    "dft",
+    "fiedler",
+    "fiedler_companion",
+    "convolution_matrix",
+    "as_strided",
+]
 
 # Names in __all__ with no definition:
 #   as_strided

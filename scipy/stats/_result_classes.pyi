@@ -5,6 +5,20 @@ from ._multicomp import DunnettResult as DunnettResult
 from ._odds_ratio import OddsRatioResult as OddsRatioResult
 from ._relative_risk import RelativeRiskResult as RelativeRiskResult
 from ._stats_py import PearsonRResult as PearsonRResult, TtestResult as TtestResult
-from ._survival import ECDFResult as ECDFResult, EmpiricalDistributionFunction as EmpiricalDistributionFunction
+from ._survival import (
+    ECDFResult as ECDFResult,
+    EmpiricalDistributionFunction as EmpiricalDistributionFunction,
+)
 
-__all__ = ['BinomTestResult', 'RelativeRiskResult', 'TukeyHSDResult', 'PearsonRResult', 'FitResult', 'OddsRatioResult', 'TtestResult', 'DunnettResult', 'ECDFResult', 'EmpiricalDistributionFunction']
+__all__ = [
+    "BinomTestResult",
+    "RelativeRiskResult",
+    "TukeyHSDResult",
+    "PearsonRResult",
+    "FitResult",
+    "OddsRatioResult",
+    "TtestResult",
+    "DunnettResult",
+    "ECDFResult",
+    "EmpiricalDistributionFunction",
+]

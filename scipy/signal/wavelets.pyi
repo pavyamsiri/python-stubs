@@ -1,4 +1,15 @@
-__all__ = ['daub', 'qmf', 'cascade', 'morlet', 'ricker', 'morlet2', 'cwt', 'eig', 'comb', 'convolve']
+__all__ = [
+    "daub",
+    "qmf",
+    "cascade",
+    "morlet",
+    "ricker",
+    "morlet2",
+    "cwt",
+    "eig",
+    "comb",
+    "convolve",
+]
 
 # Names in __all__ with no definition:
 #   cascade

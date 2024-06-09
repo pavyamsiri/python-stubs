@@ -11,4 +11,16 @@ def prepare_bounds(bounds, n): ...
 
 TERMINATION_MESSAGES: Incomplete
 
-def lsq_linear(A, b, bounds=..., method: str = 'trf', tol: float = 1e-10, lsq_solver: Incomplete | None = None, lsmr_tol: Incomplete | None = None, max_iter: Incomplete | None = None, verbose: int = 0, *, lsmr_maxiter: Incomplete | None = None): ...
+def lsq_linear(
+    A,
+    b,
+    bounds=...,
+    method: str = "trf",
+    tol: float = 1e-10,
+    lsq_solver: Incomplete | None = None,
+    lsmr_tol: Incomplete | None = None,
+    max_iter: Incomplete | None = None,
+    verbose: int = 0,
+    *,
+    lsmr_maxiter: Incomplete | None = None,
+): ...

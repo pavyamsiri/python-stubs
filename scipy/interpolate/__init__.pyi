@@ -8,11 +8,78 @@ from ._ndgriddata import *
 from ._bsplines import *
 from ._pade import *
 from ._rgi import *
-from . import fitpack as fitpack, fitpack2 as fitpack2, interpolate as interpolate, ndgriddata as ndgriddata, polyint as polyint, rbf as rbf
+from . import (
+    fitpack as fitpack,
+    fitpack2 as fitpack2,
+    interpolate as interpolate,
+    ndgriddata as ndgriddata,
+    polyint as polyint,
+    rbf as rbf,
+)
 from ._ndbspline import NdBSpline as NdBSpline
 from ._rbf import Rbf as Rbf
 
-__all__ = ['Akima1DInterpolator', 'BPoly', 'BSpline', 'BarycentricInterpolator', 'BivariateSpline', 'CloughTocher2DInterpolator', 'CubicHermiteSpline', 'CubicSpline', 'InterpolatedUnivariateSpline', 'KroghInterpolator', 'LSQBivariateSpline', 'LSQSphereBivariateSpline', 'LSQUnivariateSpline', 'LinearNDInterpolator', 'NdBSpline', 'NdPPoly', 'NearestNDInterpolator', 'PPoly', 'PchipInterpolator', 'RBFInterpolator', 'Rbf', 'RectBivariateSpline', 'RectSphereBivariateSpline', 'RegularGridInterpolator', 'SmoothBivariateSpline', 'SmoothSphereBivariateSpline', 'UnivariateSpline', 'approximate_taylor_polynomial', 'barycentric_interpolate', 'bisplev', 'bisplrep', 'dfitpack', 'fitpack', 'fitpack2', 'griddata', 'insert', 'interp1d', 'interp2d', 'interpn', 'interpnd', 'interpolate', 'krogh_interpolate', 'lagrange', 'make_interp_spline', 'make_lsq_spline', 'make_smoothing_spline', 'ndgriddata', 'pade', 'pchip_interpolate', 'polyint', 'rbf', 'spalde', 'splantider', 'splder', 'splev', 'splint', 'splprep', 'splrep', 'sproot']
+__all__ = [
+    "Akima1DInterpolator",
+    "BPoly",
+    "BSpline",
+    "BarycentricInterpolator",
+    "BivariateSpline",
+    "CloughTocher2DInterpolator",
+    "CubicHermiteSpline",
+    "CubicSpline",
+    "InterpolatedUnivariateSpline",
+    "KroghInterpolator",
+    "LSQBivariateSpline",
+    "LSQSphereBivariateSpline",
+    "LSQUnivariateSpline",
+    "LinearNDInterpolator",
+    "NdBSpline",
+    "NdPPoly",
+    "NearestNDInterpolator",
+    "PPoly",
+    "PchipInterpolator",
+    "RBFInterpolator",
+    "Rbf",
+    "RectBivariateSpline",
+    "RectSphereBivariateSpline",
+    "RegularGridInterpolator",
+    "SmoothBivariateSpline",
+    "SmoothSphereBivariateSpline",
+    "UnivariateSpline",
+    "approximate_taylor_polynomial",
+    "barycentric_interpolate",
+    "bisplev",
+    "bisplrep",
+    "dfitpack",
+    "fitpack",
+    "fitpack2",
+    "griddata",
+    "insert",
+    "interp1d",
+    "interp2d",
+    "interpn",
+    "interpnd",
+    "interpolate",
+    "krogh_interpolate",
+    "lagrange",
+    "make_interp_spline",
+    "make_lsq_spline",
+    "make_smoothing_spline",
+    "ndgriddata",
+    "pade",
+    "pchip_interpolate",
+    "polyint",
+    "rbf",
+    "spalde",
+    "splantider",
+    "splder",
+    "splev",
+    "splint",
+    "splprep",
+    "splrep",
+    "sproot",
+]
 
 pchip = PchipInterpolator
 

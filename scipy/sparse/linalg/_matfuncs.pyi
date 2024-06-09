@@ -1,7 +1,7 @@
 from _typeshed import Incomplete
 from scipy.sparse.linalg._interface import LinearOperator
 
-__all__ = ['expm', 'inv', 'matrix_power']
+__all__ = ["expm", "inv", "matrix_power"]
 
 def inv(A): ...
 
@@ -26,7 +26,9 @@ class _ExpmPadeHelper:
     ident: Incomplete
     structure: Incomplete
     use_exact_onenorm: Incomplete
-    def __init__(self, A, structure: Incomplete | None = None, use_exact_onenorm: bool = False) -> None: ...
+    def __init__(
+        self, A, structure: Incomplete | None = None, use_exact_onenorm: bool = False
+    ) -> None: ...
     @property
     def A2(self): ...
     @property

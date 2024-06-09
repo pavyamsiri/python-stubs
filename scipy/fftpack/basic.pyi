@@ -1,4 +1,4 @@
-__all__ = ['fft', 'ifft', 'fftn', 'ifftn', 'rfft', 'irfft', 'fft2', 'ifft2']
+__all__ = ["fft", "ifft", "fftn", "ifftn", "rfft", "irfft", "fft2", "ifft2"]
 
 # Names in __all__ with no definition:
 #   fft

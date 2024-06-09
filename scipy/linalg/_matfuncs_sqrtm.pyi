@@ -1,6 +1,6 @@
 import numpy as np
 
-__all__ = ['sqrtm']
+__all__ = ["sqrtm"]
 
 class SqrtmError(np.linalg.LinAlgError): ...
 

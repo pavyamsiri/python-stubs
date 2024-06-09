@@ -1,7 +1,7 @@
 from .._distn_infrastructure import rv_continuous
 from _typeshed import Incomplete
 
-__all__ = ['levy_stable', 'levy_stable_gen', 'pdf_from_cf_with_fft']
+__all__ = ["levy_stable", "levy_stable_gen", "pdf_from_cf_with_fft"]
 
 class levy_stable_gen(rv_continuous):
     parameterization: str

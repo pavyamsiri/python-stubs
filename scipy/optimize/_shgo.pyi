@@ -1,8 +1,21 @@
 from _typeshed import Incomplete
 
-__all__ = ['shgo']
+__all__ = ["shgo"]
 
-def shgo(func, bounds, args=(), constraints: Incomplete | None = None, n: int = 100, iters: int = 1, callback: Incomplete | None = None, minimizer_kwargs: Incomplete | None = None, options: Incomplete | None = None, sampling_method: str = 'simplicial', *, workers: int = 1): ...
+def shgo(
+    func,
+    bounds,
+    args=(),
+    constraints: Incomplete | None = None,
+    n: int = 100,
+    iters: int = 1,
+    callback: Incomplete | None = None,
+    minimizer_kwargs: Incomplete | None = None,
+    options: Incomplete | None = None,
+    sampling_method: str = "simplicial",
+    *,
+    workers: int = 1,
+): ...
 
 class SHGO:
     func: Incomplete
@@ -49,7 +62,20 @@ class SHGO:
     minimizer_pool: Incomplete
     LMC: Incomplete
     res: Incomplete
-    def __init__(self, func, bounds, args=(), constraints: Incomplete | None = None, n: Incomplete | None = None, iters: Incomplete | None = None, callback: Incomplete | None = None, minimizer_kwargs: Incomplete | None = None, options: Incomplete | None = None, sampling_method: str = 'simplicial', workers: int = 1) -> None: ...
+    def __init__(
+        self,
+        func,
+        bounds,
+        args=(),
+        constraints: Incomplete | None = None,
+        n: Incomplete | None = None,
+        iters: Incomplete | None = None,
+        callback: Incomplete | None = None,
+        minimizer_kwargs: Incomplete | None = None,
+        options: Incomplete | None = None,
+        sampling_method: str = "simplicial",
+        workers: int = 1,
+    ) -> None: ...
     init: Incomplete
     f_tol: Incomplete
     def init_options(self, options) -> None: ...
@@ -90,7 +116,7 @@ class SHGO:
     def construct_lcb_delaunay(self, v_min, ind: Incomplete | None = None): ...
     def minimize(self, x_min, ind: Incomplete | None = None): ...
     def sort_result(self): ...
-    def fail_routine(self, mes: str = 'Failed to converge') -> None: ...
+    def fail_routine(self, mes: str = "Failed to converge") -> None: ...
     C: Incomplete
     def sampled_surface(self, infty_cons_sampl: bool = False) -> None: ...
     def sampling_custom(self, n, dim): ...

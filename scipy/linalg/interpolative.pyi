@@ -1,6 +1,18 @@
 from _typeshed import Incomplete
 
-__all__ = ['estimate_rank', 'estimate_spectral_norm', 'estimate_spectral_norm_diff', 'id_to_svd', 'interp_decomp', 'rand', 'reconstruct_interp_matrix', 'reconstruct_matrix_from_id', 'reconstruct_skel_matrix', 'seed', 'svd']
+__all__ = [
+    "estimate_rank",
+    "estimate_spectral_norm",
+    "estimate_spectral_norm_diff",
+    "id_to_svd",
+    "interp_decomp",
+    "rand",
+    "reconstruct_interp_matrix",
+    "reconstruct_matrix_from_id",
+    "reconstruct_skel_matrix",
+    "seed",
+    "svd",
+]
 
 def seed(seed: Incomplete | None = None) -> None: ...
 def rand(*shape): ...

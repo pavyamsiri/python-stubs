@@ -6,7 +6,20 @@ from .lsqr import lsqr as lsqr
 from .minres import minres as minres
 from .tfqmr import tfqmr as tfqmr
 
-__all__ = ['bicg', 'bicgstab', 'cg', 'cgs', 'gcrotmk', 'gmres', 'lgmres', 'lsmr', 'lsqr', 'minres', 'qmr', 'tfqmr']
+__all__ = [
+    "bicg",
+    "bicgstab",
+    "cg",
+    "cgs",
+    "gcrotmk",
+    "gmres",
+    "lgmres",
+    "lsmr",
+    "lsqr",
+    "minres",
+    "qmr",
+    "tfqmr",
+]
 
 # Names in __all__ with no definition:
 #   bicg

@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['delaunay_plot_2d', 'convex_hull_plot_2d', 'voronoi_plot_2d']
+__all__ = ["delaunay_plot_2d", "convex_hull_plot_2d", "voronoi_plot_2d"]
 
 def delaunay_plot_2d(tri, ax: Incomplete | None = None): ...
 def convex_hull_plot_2d(hull, ax: Incomplete | None = None): ...

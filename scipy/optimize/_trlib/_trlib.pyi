@@ -1,5 +1,7 @@
 import scipy.optimize._trustregion
-from scipy.optimize._trustregion import BaseQuadraticSubproblem as BaseQuadraticSubproblem
+from scipy.optimize._trustregion import (
+    BaseQuadraticSubproblem as BaseQuadraticSubproblem,
+)
 
 __test__: dict
 

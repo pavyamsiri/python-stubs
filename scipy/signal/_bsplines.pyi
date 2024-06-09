@@ -1,4 +1,11 @@
-__all__ = ['spline_filter', 'gauss_spline', 'cspline1d', 'qspline1d', 'cspline1d_eval', 'qspline1d_eval']
+__all__ = [
+    "spline_filter",
+    "gauss_spline",
+    "cspline1d",
+    "qspline1d",
+    "cspline1d_eval",
+    "qspline1d_eval",
+]
 
 def spline_filter(Iin, lmbda: float = 5.0): ...
 def gauss_spline(x, n): ...

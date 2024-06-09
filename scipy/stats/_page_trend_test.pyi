@@ -9,7 +9,12 @@ class PageTrendTestResult:
     method: str
     def __init__(self, statistic, pvalue, method) -> None: ...
 
-def page_trend_test(data, ranked: bool = False, predicted_ranks: Incomplete | None = None, method: str = 'auto'): ...
+def page_trend_test(
+    data,
+    ranked: bool = False,
+    predicted_ranks: Incomplete | None = None,
+    method: str = "auto",
+): ...
 
 class _PageL:
     all_pmfs: Incomplete

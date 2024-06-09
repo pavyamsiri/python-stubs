@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['daub', 'qmf', 'cascade', 'morlet', 'ricker', 'morlet2', 'cwt']
+__all__ = ["daub", "qmf", "cascade", "morlet", "ricker", "morlet2", "cwt"]
 
 def daub(p): ...
 def qmf(hk): ...

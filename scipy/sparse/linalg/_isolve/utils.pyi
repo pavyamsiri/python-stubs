@@ -1,4 +1,8 @@
-from scipy.sparse.linalg._interface import IdentityOperator as IdentityOperator, LinearOperator as LinearOperator, aslinearoperator as aslinearoperator
+from scipy.sparse.linalg._interface import (
+    IdentityOperator as IdentityOperator,
+    LinearOperator as LinearOperator,
+    aslinearoperator as aslinearoperator,
+)
 
 __docformat__: str
 

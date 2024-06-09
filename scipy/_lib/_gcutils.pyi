@@ -1,7 +1,7 @@
 from _typeshed import Incomplete
 from collections.abc import Generator
 
-__all__ = ['set_gc_state', 'gc_state', 'assert_deallocated']
+__all__ = ["set_gc_state", "gc_state", "assert_deallocated"]
 
 class ReferenceError(AssertionError): ...
 

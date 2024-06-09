@@ -1,4 +1,17 @@
-__all__ = ['diff', 'tilbert', 'itilbert', 'hilbert', 'ihilbert', 'cs_diff', 'cc_diff', 'sc_diff', 'ss_diff', 'shift', 'iscomplexobj', 'convolve']
+__all__ = [
+    "diff",
+    "tilbert",
+    "itilbert",
+    "hilbert",
+    "ihilbert",
+    "cs_diff",
+    "cc_diff",
+    "sc_diff",
+    "ss_diff",
+    "shift",
+    "iscomplexobj",
+    "convolve",
+]
 
 # Names in __all__ with no definition:
 #   cc_diff

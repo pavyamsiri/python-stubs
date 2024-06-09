@@ -1,4 +1,15 @@
-__all__ = ['MatrixRankWarning', 'SuperLU', 'factorized', 'spilu', 'splu', 'spsolve', 'spsolve_triangular', 'use_solver', 'linsolve', 'test']
+__all__ = [
+    "MatrixRankWarning",
+    "SuperLU",
+    "factorized",
+    "spilu",
+    "splu",
+    "spsolve",
+    "spsolve_triangular",
+    "use_solver",
+    "linsolve",
+    "test",
+]
 
 # Names in __all__ with no definition:
 #   MatrixRankWarning

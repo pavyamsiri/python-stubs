@@ -3,7 +3,7 @@ from ._compressed import _cs_matrix
 from ._matrix import spmatrix
 from _typeshed import Incomplete
 
-__all__ = ['csc_array', 'csc_matrix', 'isspmatrix_csc']
+__all__ = ["csc_array", "csc_matrix", "isspmatrix_csc"]
 
 class _csc_base(_cs_matrix):
     def transpose(self, axes: Incomplete | None = None, copy: bool = False): ...

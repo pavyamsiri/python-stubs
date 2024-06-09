@@ -1,4 +1,20 @@
-__all__ = ['bicg', 'bicgstab', 'cg', 'cgs', 'gcrotmk', 'gmres', 'lgmres', 'lsmr', 'lsqr', 'minres', 'qmr', 'tfqmr', 'utils', 'iterative', 'test']
+__all__ = [
+    "bicg",
+    "bicgstab",
+    "cg",
+    "cgs",
+    "gcrotmk",
+    "gmres",
+    "lgmres",
+    "lsmr",
+    "lsqr",
+    "minres",
+    "qmr",
+    "tfqmr",
+    "utils",
+    "iterative",
+    "test",
+]
 
 # Names in __all__ with no definition:
 #   bicg

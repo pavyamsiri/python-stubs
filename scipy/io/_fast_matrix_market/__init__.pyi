@@ -2,7 +2,7 @@ import io
 import threadpoolctl
 from _typeshed import Incomplete
 
-__all__ = ['mminfo', 'mmread', 'mmwrite']
+__all__ = ["mminfo", "mmread", "mmwrite"]
 
 class _FMMThreadPoolCtlController(threadpoolctl.LibController):
     user_api: str
@@ -16,7 +16,13 @@ class _FMMThreadPoolCtlController(threadpoolctl.LibController):
 class _TextToBytesWrapper(io.BufferedReader):
     encoding: Incomplete
     errors: Incomplete
-    def __init__(self, text_io_buffer, encoding: Incomplete | None = None, errors: Incomplete | None = None, **kwargs) -> None: ...
+    def __init__(
+        self,
+        text_io_buffer,
+        encoding: Incomplete | None = None,
+        errors: Incomplete | None = None,
+        **kwargs,
+    ) -> None: ...
     def __del__(self) -> None: ...
     def read(self, size: int = -1): ...
     def read1(self, size: int = -1): ...
@@ -24,5 +30,12 @@ class _TextToBytesWrapper(io.BufferedReader):
     def seek(self, offset, whence: int = 0) -> None: ...
 
 def mmread(source): ...
-def mmwrite(target, a, comment: Incomplete | None = None, field: Incomplete | None = None, precision: Incomplete | None = None, symmetry: str = 'AUTO') -> None: ...
+def mmwrite(
+    target,
+    a,
+    comment: Incomplete | None = None,
+    field: Incomplete | None = None,
+    precision: Incomplete | None = None,
+    symmetry: str = "AUTO",
+) -> None: ...
 def mminfo(source): ...

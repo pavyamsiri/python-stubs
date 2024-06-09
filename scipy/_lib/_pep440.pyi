@@ -1,7 +1,7 @@
 from _typeshed import Incomplete
 from typing import NamedTuple
 
-__all__ = ['parse', 'Version', 'LegacyVersion', 'InvalidVersion', 'VERSION_PATTERN']
+__all__ = ["parse", "Version", "LegacyVersion", "InvalidVersion", "VERSION_PATTERN"]
 
 class Infinity:
     def __hash__(self): ...

@@ -1,4 +1,4 @@
-__all__ = ['SpecialFunctionWarning', 'SpecialFunctionError']
+__all__ = ["SpecialFunctionWarning", "SpecialFunctionError"]
 
 # Names in __all__ with no definition:
 #   SpecialFunctionError

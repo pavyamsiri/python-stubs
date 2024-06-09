@@ -1,5 +1,14 @@
 from .base import DenseOutput as DenseOutput, OdeSolver as OdeSolver
-from .common import EPS as EPS, norm as norm, num_jac as num_jac, select_initial_step as select_initial_step, validate_first_step as validate_first_step, validate_max_step as validate_max_step, validate_tol as validate_tol, warn_extraneous as warn_extraneous
+from .common import (
+    EPS as EPS,
+    norm as norm,
+    num_jac as num_jac,
+    select_initial_step as select_initial_step,
+    validate_first_step as validate_first_step,
+    validate_max_step as validate_max_step,
+    validate_tol as validate_tol,
+    warn_extraneous as warn_extraneous,
+)
 from _typeshed import Incomplete
 from scipy.linalg import lu_factor as lu_factor, lu_solve as lu_solve
 from scipy.optimize._numdiff import group_columns as group_columns
@@ -32,7 +41,21 @@ class BDF(OdeSolver):
     order: int
     n_equal_steps: int
     LU: Incomplete
-    def __init__(self, fun, t0, y0, t_bound, max_step=..., rtol: float = 0.001, atol: float = 1e-06, jac: Incomplete | None = None, jac_sparsity: Incomplete | None = None, vectorized: bool = False, first_step: Incomplete | None = None, **extraneous) -> None: ...
+    def __init__(
+        self,
+        fun,
+        t0,
+        y0,
+        t_bound,
+        max_step=...,
+        rtol: float = 0.001,
+        atol: float = 1e-06,
+        jac: Incomplete | None = None,
+        jac_sparsity: Incomplete | None = None,
+        vectorized: bool = False,
+        first_step: Incomplete | None = None,
+        **extraneous,
+    ) -> None: ...
 
 class BdfDenseOutput(DenseOutput):
     order: Incomplete

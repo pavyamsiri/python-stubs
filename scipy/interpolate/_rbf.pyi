@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['Rbf']
+__all__ = ["Rbf"]
 
 class Rbf:
     xi: Incomplete

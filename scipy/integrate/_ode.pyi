@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['ode', 'complex_ode']
+__all__ = ["ode", "complex_ode"]
 
 class ode:
     stiff: int
@@ -72,7 +72,20 @@ class vode(IntegratorBase):
     first_step: Incomplete
     success: int
     initialized: bool
-    def __init__(self, method: str = 'adams', with_jacobian: bool = False, rtol: float = 1e-06, atol: float = 1e-12, lband: Incomplete | None = None, uband: Incomplete | None = None, order: int = 12, nsteps: int = 500, max_step: float = 0.0, min_step: float = 0.0, first_step: float = 0.0) -> None: ...
+    def __init__(
+        self,
+        method: str = "adams",
+        with_jacobian: bool = False,
+        rtol: float = 1e-06,
+        atol: float = 1e-12,
+        lband: Incomplete | None = None,
+        uband: Incomplete | None = None,
+        order: int = 12,
+        nsteps: int = 500,
+        max_step: float = 0.0,
+        min_step: float = 0.0,
+        first_step: float = 0.0,
+    ) -> None: ...
     rwork: Incomplete
     iwork: Incomplete
     call_args: Incomplete
@@ -112,7 +125,20 @@ class dopri5(IntegratorBase):
     beta: Incomplete
     verbosity: Incomplete
     success: int
-    def __init__(self, rtol: float = 1e-06, atol: float = 1e-12, nsteps: int = 500, max_step: float = 0.0, first_step: float = 0.0, safety: float = 0.9, ifactor: float = 10.0, dfactor: float = 0.2, beta: float = 0.0, method: Incomplete | None = None, verbosity: int = -1) -> None: ...
+    def __init__(
+        self,
+        rtol: float = 1e-06,
+        atol: float = 1e-12,
+        nsteps: int = 500,
+        max_step: float = 0.0,
+        first_step: float = 0.0,
+        safety: float = 0.9,
+        ifactor: float = 10.0,
+        dfactor: float = 0.2,
+        beta: float = 0.0,
+        method: Incomplete | None = None,
+        verbosity: int = -1,
+    ) -> None: ...
     solout: Incomplete
     solout_cmplx: Incomplete
     iout: int
@@ -127,7 +153,20 @@ class dopri5(IntegratorBase):
 class dop853(dopri5):
     runner: Incomplete
     name: str
-    def __init__(self, rtol: float = 1e-06, atol: float = 1e-12, nsteps: int = 500, max_step: float = 0.0, first_step: float = 0.0, safety: float = 0.9, ifactor: float = 6.0, dfactor: float = 0.3, beta: float = 0.0, method: Incomplete | None = None, verbosity: int = -1) -> None: ...
+    def __init__(
+        self,
+        rtol: float = 1e-06,
+        atol: float = 1e-12,
+        nsteps: int = 500,
+        max_step: float = 0.0,
+        first_step: float = 0.0,
+        safety: float = 0.9,
+        ifactor: float = 6.0,
+        dfactor: float = 0.3,
+        beta: float = 0.0,
+        method: Incomplete | None = None,
+        verbosity: int = -1,
+    ) -> None: ...
     work: Incomplete
     iwork: Incomplete
     call_args: Incomplete
@@ -153,7 +192,23 @@ class lsoda(IntegratorBase):
     max_hnil: Incomplete
     success: int
     initialized: bool
-    def __init__(self, with_jacobian: bool = False, rtol: float = 1e-06, atol: float = 1e-12, lband: Incomplete | None = None, uband: Incomplete | None = None, nsteps: int = 500, max_step: float = 0.0, min_step: float = 0.0, first_step: float = 0.0, ixpr: int = 0, max_hnil: int = 0, max_order_ns: int = 12, max_order_s: int = 5, method: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        with_jacobian: bool = False,
+        rtol: float = 1e-06,
+        atol: float = 1e-12,
+        lband: Incomplete | None = None,
+        uband: Incomplete | None = None,
+        nsteps: int = 500,
+        max_step: float = 0.0,
+        min_step: float = 0.0,
+        first_step: float = 0.0,
+        ixpr: int = 0,
+        max_hnil: int = 0,
+        max_order_ns: int = 12,
+        max_order_s: int = 5,
+        method: Incomplete | None = None,
+    ) -> None: ...
     rwork: Incomplete
     iwork: Incomplete
     call_args: Incomplete

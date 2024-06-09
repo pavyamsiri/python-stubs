@@ -13,7 +13,9 @@ IntNumber = int | np.integer
 DecimalNumber = float | np.floating | np.integer
 copy_if_needed: bool | None
 SeedType: Incomplete
-GeneratorType = TypeVar('GeneratorType', bound=np.random.Generator | np.random.RandomState)
+GeneratorType = TypeVar(
+    "GeneratorType", bound=np.random.Generator | np.random.RandomState
+)
 
 class Generator: ...
 
@@ -44,10 +46,22 @@ class MapWrapper:
     def terminate(self) -> None: ...
     def join(self) -> None: ...
     def close(self) -> None: ...
-    def __exit__(self, exc_type: type[BaseException] | None, exc_value: BaseException | None, traceback: types.TracebackType | None) -> None: ...
+    def __exit__(
+        self,
+        exc_type: type[BaseException] | None,
+        exc_value: BaseException | None,
+        traceback: types.TracebackType | None,
+    ) -> None: ...
     def __call__(self, func, iterable): ...
 
-def rng_integers(gen, low, high: Incomplete | None = None, size: Incomplete | None = None, dtype: str = 'int64', endpoint: bool = False): ...
+def rng_integers(
+    gen,
+    low,
+    high: Incomplete | None = None,
+    size: Incomplete | None = None,
+    dtype: str = "int64",
+    endpoint: bool = False,
+): ...
 def normalize_axis_index(axis, ndim): ...
 
 class _RichResult(dict):

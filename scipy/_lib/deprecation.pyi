@@ -1,4 +1,4 @@
-__all__ = ['_deprecated']
+__all__ = ["_deprecated"]
 
 def _deprecated(msg, stacklevel: int = 2): ...
 

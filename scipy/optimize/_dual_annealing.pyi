@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['dual_annealing']
+__all__ = ["dual_annealing"]
 
 class VisitingDistribution:
     TAIL_LIMIT: float
@@ -39,7 +39,15 @@ class StrategyChain:
     not_improved_max_idx: int
     temperature_step: int
     K: Incomplete
-    def __init__(self, acceptance_param, visit_dist, func_wrapper, minimizer_wrapper, rand_gen, energy_state) -> None: ...
+    def __init__(
+        self,
+        acceptance_param,
+        visit_dist,
+        func_wrapper,
+        minimizer_wrapper,
+        rand_gen,
+        energy_state,
+    ) -> None: ...
     def accept_reject(self, j, e, x_visit) -> None: ...
     energy_state_improved: bool
     def run(self, step, temperature): ...
@@ -68,4 +76,19 @@ class LocalSearchWrapper:
     def __init__(self, search_bounds, func_wrapper, *args, **kwargs) -> None: ...
     def local_search(self, x, e): ...
 
-def dual_annealing(func, bounds, args=(), maxiter: int = 1000, minimizer_kwargs: Incomplete | None = None, initial_temp: float = 5230.0, restart_temp_ratio: float = 2e-05, visit: float = 2.62, accept: float = -5.0, maxfun: float = 10000000.0, seed: Incomplete | None = None, no_local_search: bool = False, callback: Incomplete | None = None, x0: Incomplete | None = None): ...
+def dual_annealing(
+    func,
+    bounds,
+    args=(),
+    maxiter: int = 1000,
+    minimizer_kwargs: Incomplete | None = None,
+    initial_temp: float = 5230.0,
+    restart_temp_ratio: float = 2e-05,
+    visit: float = 2.62,
+    accept: float = -5.0,
+    maxfun: float = 10000000.0,
+    seed: Incomplete | None = None,
+    no_local_search: bool = False,
+    callback: Incomplete | None = None,
+    x0: Incomplete | None = None,
+): ...

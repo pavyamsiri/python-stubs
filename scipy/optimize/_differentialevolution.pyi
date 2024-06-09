@@ -1,8 +1,31 @@
 from _typeshed import Incomplete
 
-__all__ = ['differential_evolution']
+__all__ = ["differential_evolution"]
 
-def differential_evolution(func, bounds, args=(), strategy: str = 'best1bin', maxiter: int = 1000, popsize: int = 15, tol: float = 0.01, mutation=(0.5, 1), recombination: float = 0.7, seed: Incomplete | None = None, callback: Incomplete | None = None, disp: bool = False, polish: bool = True, init: str = 'latinhypercube', atol: int = 0, updating: str = 'immediate', workers: int = 1, constraints=(), x0: Incomplete | None = None, *, integrality: Incomplete | None = None, vectorized: bool = False): ...
+def differential_evolution(
+    func,
+    bounds,
+    args=(),
+    strategy: str = "best1bin",
+    maxiter: int = 1000,
+    popsize: int = 15,
+    tol: float = 0.01,
+    mutation=(0.5, 1),
+    recombination: float = 0.7,
+    seed: Incomplete | None = None,
+    callback: Incomplete | None = None,
+    disp: bool = False,
+    polish: bool = True,
+    init: str = "latinhypercube",
+    atol: int = 0,
+    updating: str = "immediate",
+    workers: int = 1,
+    constraints=(),
+    x0: Incomplete | None = None,
+    *,
+    integrality: Incomplete | None = None,
+    vectorized: bool = False,
+): ...
 
 class DifferentialEvolutionSolver:
     mutation_func: Incomplete
@@ -28,7 +51,32 @@ class DifferentialEvolutionSolver:
     constraint_violation: Incomplete
     feasible: Incomplete
     disp: Incomplete
-    def __init__(self, func, bounds, args=(), strategy: str = 'best1bin', maxiter: int = 1000, popsize: int = 15, tol: float = 0.01, mutation=(0.5, 1), recombination: float = 0.7, seed: Incomplete | None = None, maxfun=..., callback: Incomplete | None = None, disp: bool = False, polish: bool = True, init: str = 'latinhypercube', atol: int = 0, updating: str = 'immediate', workers: int = 1, constraints=(), x0: Incomplete | None = None, *, integrality: Incomplete | None = None, vectorized: bool = False) -> None: ...
+    def __init__(
+        self,
+        func,
+        bounds,
+        args=(),
+        strategy: str = "best1bin",
+        maxiter: int = 1000,
+        popsize: int = 15,
+        tol: float = 0.01,
+        mutation=(0.5, 1),
+        recombination: float = 0.7,
+        seed: Incomplete | None = None,
+        maxfun=...,
+        callback: Incomplete | None = None,
+        disp: bool = False,
+        polish: bool = True,
+        init: str = "latinhypercube",
+        atol: int = 0,
+        updating: str = "immediate",
+        workers: int = 1,
+        constraints=(),
+        x0: Incomplete | None = None,
+        *,
+        integrality: Incomplete | None = None,
+        vectorized: bool = False,
+    ) -> None: ...
     population: Incomplete
     population_energies: Incomplete
     def init_population_lhs(self) -> None: ...

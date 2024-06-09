@@ -1,4 +1,4 @@
-__all__ = ['dct', 'idct', 'dst', 'idst', 'dctn', 'idctn', 'dstn', 'idstn']
+__all__ = ["dct", "idct", "dst", "idst", "dctn", "idctn", "dstn", "idstn"]
 
 # Names in __all__ with no definition:
 #   dct

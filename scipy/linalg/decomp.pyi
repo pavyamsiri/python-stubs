@@ -1,4 +1,29 @@
-__all__ = ['eig', 'eigvals', 'eigh', 'eigvalsh', 'eig_banded', 'eigvals_banded', 'eigh_tridiagonal', 'eigvalsh_tridiagonal', 'hessenberg', 'cdf2rdf', 'array', 'isfinite', 'inexact', 'nonzero', 'iscomplexobj', 'flatnonzero', 'argsort', 'iscomplex', 'einsum', 'eye', 'inf', 'LinAlgError', 'norm', 'get_lapack_funcs']
+__all__ = [
+    "eig",
+    "eigvals",
+    "eigh",
+    "eigvalsh",
+    "eig_banded",
+    "eigvals_banded",
+    "eigh_tridiagonal",
+    "eigvalsh_tridiagonal",
+    "hessenberg",
+    "cdf2rdf",
+    "array",
+    "isfinite",
+    "inexact",
+    "nonzero",
+    "iscomplexobj",
+    "flatnonzero",
+    "argsort",
+    "iscomplex",
+    "einsum",
+    "eye",
+    "inf",
+    "LinAlgError",
+    "norm",
+    "get_lapack_funcs",
+]
 
 # Names in __all__ with no definition:
 #   LinAlgError

@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['BadFortranFormat', 'FortranFormatParser', 'IntFormat', 'ExpFormat']
+__all__ = ["BadFortranFormat", "FortranFormatParser", "IntFormat", "ExpFormat"]
 
 class BadFortranFormat(SyntaxError): ...
 
@@ -10,7 +10,9 @@ class IntFormat:
     width: Incomplete
     repeat: Incomplete
     min: Incomplete
-    def __init__(self, width, min: Incomplete | None = None, repeat: Incomplete | None = None) -> None: ...
+    def __init__(
+        self, width, min: Incomplete | None = None, repeat: Incomplete | None = None
+    ) -> None: ...
     @property
     def fortran_format(self): ...
     @property
@@ -23,7 +25,13 @@ class ExpFormat:
     significand: Incomplete
     repeat: Incomplete
     min: Incomplete
-    def __init__(self, width, significand, min: Incomplete | None = None, repeat: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        width,
+        significand,
+        min: Incomplete | None = None,
+        repeat: Incomplete | None = None,
+    ) -> None: ...
     @property
     def fortran_format(self): ...
     @property

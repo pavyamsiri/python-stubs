@@ -1,7 +1,48 @@
 from ._distn_infrastructure import rv_discrete
 from _typeshed import Incomplete
 
-__all__ = ['binom', 'bernoulli', 'betabinom', 'nbinom', 'betanbinom', 'geom', 'hypergeom', 'nhypergeom', 'logser', 'poisson', 'planck', 'boltzmann', 'randint', 'zipf', 'zipfian', 'dlaplace', 'skellam', 'yulesimon', 'nchypergeom_fisher', 'nchypergeom_wallenius', 'binom_gen', 'bernoulli_gen', 'betabinom_gen', 'nbinom_gen', 'betanbinom_gen', 'geom_gen', 'hypergeom_gen', 'nhypergeom_gen', 'logser_gen', 'poisson_gen', 'planck_gen', 'boltzmann_gen', 'randint_gen', 'zipf_gen', 'zipfian_gen', 'dlaplace_gen', 'skellam_gen', 'yulesimon_gen', 'nchypergeom_fisher_gen', 'nchypergeom_wallenius_gen']
+__all__ = [
+    "binom",
+    "bernoulli",
+    "betabinom",
+    "nbinom",
+    "betanbinom",
+    "geom",
+    "hypergeom",
+    "nhypergeom",
+    "logser",
+    "poisson",
+    "planck",
+    "boltzmann",
+    "randint",
+    "zipf",
+    "zipfian",
+    "dlaplace",
+    "skellam",
+    "yulesimon",
+    "nchypergeom_fisher",
+    "nchypergeom_wallenius",
+    "binom_gen",
+    "bernoulli_gen",
+    "betabinom_gen",
+    "nbinom_gen",
+    "betanbinom_gen",
+    "geom_gen",
+    "hypergeom_gen",
+    "nhypergeom_gen",
+    "logser_gen",
+    "poisson_gen",
+    "planck_gen",
+    "boltzmann_gen",
+    "randint_gen",
+    "zipf_gen",
+    "zipfian_gen",
+    "dlaplace_gen",
+    "skellam_gen",
+    "yulesimon_gen",
+    "nchypergeom_fisher_gen",
+    "nchypergeom_wallenius_gen",
+]
 
 class binom_gen(rv_discrete): ...
 

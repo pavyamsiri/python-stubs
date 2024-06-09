@@ -1,7 +1,14 @@
 from _typeshed import Incomplete
 from scipy.odr._odrpack import Model as Model
 
-__all__ = ['Model', 'exponential', 'multilinear', 'unilinear', 'quadratic', 'polynomial']
+__all__ = [
+    "Model",
+    "exponential",
+    "multilinear",
+    "unilinear",
+    "quadratic",
+    "polynomial",
+]
 
 class _MultilinearModel(Model):
     def __init__(self) -> None: ...

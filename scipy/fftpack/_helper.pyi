@@ -1,6 +1,6 @@
 from numpy.fft import fftfreq as fftfreq, fftshift as fftshift, ifftshift as ifftshift
 
-__all__ = ['fftshift', 'ifftshift', 'fftfreq', 'rfftfreq', 'next_fast_len']
+__all__ = ["fftshift", "ifftshift", "fftfreq", "rfftfreq", "next_fast_len"]
 
 def rfftfreq(n, d: float = 1.0): ...
 def next_fast_len(target): ...

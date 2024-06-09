@@ -1,7 +1,14 @@
 import numpy as np
 from . import dop853_coefficients as dop853_coefficients
 from .base import DenseOutput as DenseOutput, OdeSolver as OdeSolver
-from .common import norm as norm, select_initial_step as select_initial_step, validate_first_step as validate_first_step, validate_max_step as validate_max_step, validate_tol as validate_tol, warn_extraneous as warn_extraneous
+from .common import (
+    norm as norm,
+    select_initial_step as select_initial_step,
+    validate_first_step as validate_first_step,
+    validate_max_step as validate_max_step,
+    validate_tol as validate_tol,
+    warn_extraneous as warn_extraneous,
+)
 from _typeshed import Incomplete
 
 SAFETY: float
@@ -26,7 +33,19 @@ class RungeKutta(OdeSolver):
     K: Incomplete
     error_exponent: Incomplete
     h_previous: Incomplete
-    def __init__(self, fun, t0, y0, t_bound, max_step=..., rtol: float = 0.001, atol: float = 1e-06, vectorized: bool = False, first_step: Incomplete | None = None, **extraneous) -> None: ...
+    def __init__(
+        self,
+        fun,
+        t0,
+        y0,
+        t_bound,
+        max_step=...,
+        rtol: float = 0.001,
+        atol: float = 1e-06,
+        vectorized: bool = False,
+        first_step: Incomplete | None = None,
+        **extraneous,
+    ) -> None: ...
 
 class RK23(RungeKutta):
     order: int
@@ -62,7 +81,19 @@ class DOP853(RungeKutta):
     C_EXTRA: Incomplete
     K_extended: Incomplete
     K: Incomplete
-    def __init__(self, fun, t0, y0, t_bound, max_step=..., rtol: float = 0.001, atol: float = 1e-06, vectorized: bool = False, first_step: Incomplete | None = None, **extraneous) -> None: ...
+    def __init__(
+        self,
+        fun,
+        t0,
+        y0,
+        t_bound,
+        max_step=...,
+        rtol: float = 0.001,
+        atol: float = 1e-06,
+        vectorized: bool = False,
+        first_step: Incomplete | None = None,
+        **extraneous,
+    ) -> None: ...
 
 class RkDenseOutput(DenseOutput):
     h: Incomplete

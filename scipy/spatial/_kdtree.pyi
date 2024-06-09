@@ -1,7 +1,13 @@
 from ._ckdtree import cKDTree
 from _typeshed import Incomplete
 
-__all__ = ['minkowski_distance_p', 'minkowski_distance', 'distance_matrix', 'Rectangle', 'KDTree']
+__all__ = [
+    "minkowski_distance_p",
+    "minkowski_distance",
+    "distance_matrix",
+    "Rectangle",
+    "KDTree",
+]
 
 def minkowski_distance_p(x, y, p: int = 2): ...
 def minkowski_distance(x, y, p: int = 2): ...
@@ -25,11 +31,13 @@ class KDTree(cKDTree):
         def __le__(self, other): ...
         def __ge__(self, other): ...
         def __eq__(self, other): ...
+
     class leafnode(node):
         @property
         def idx(self): ...
         @property
         def children(self): ...
+
     class innernode(node):
         less: Incomplete
         greater: Incomplete
@@ -40,14 +48,51 @@ class KDTree(cKDTree):
         def split(self): ...
         @property
         def children(self): ...
+
     @property
     def tree(self): ...
-    def __init__(self, data, leafsize: int = 10, compact_nodes: bool = True, copy_data: bool = False, balanced_tree: bool = True, boxsize: Incomplete | None = None) -> None: ...
-    def query(self, x, k: int = 1, eps: int = 0, p: int = 2, distance_upper_bound=..., workers: int = 1): ...
-    def query_ball_point(self, x, r, p: float = 2.0, eps: int = 0, workers: int = 1, return_sorted: Incomplete | None = None, return_length: bool = False): ...
+    def __init__(
+        self,
+        data,
+        leafsize: int = 10,
+        compact_nodes: bool = True,
+        copy_data: bool = False,
+        balanced_tree: bool = True,
+        boxsize: Incomplete | None = None,
+    ) -> None: ...
+    def query(
+        self,
+        x,
+        k: int = 1,
+        eps: int = 0,
+        p: int = 2,
+        distance_upper_bound=...,
+        workers: int = 1,
+    ): ...
+    def query_ball_point(
+        self,
+        x,
+        r,
+        p: float = 2.0,
+        eps: int = 0,
+        workers: int = 1,
+        return_sorted: Incomplete | None = None,
+        return_length: bool = False,
+    ): ...
     def query_ball_tree(self, other, r, p: float = 2.0, eps: int = 0): ...
-    def query_pairs(self, r, p: float = 2.0, eps: int = 0, output_type: str = 'set'): ...
-    def count_neighbors(self, other, r, p: float = 2.0, weights: Incomplete | None = None, cumulative: bool = True): ...
-    def sparse_distance_matrix(self, other, max_distance, p: float = 2.0, output_type: str = 'dok_matrix'): ...
+    def query_pairs(
+        self, r, p: float = 2.0, eps: int = 0, output_type: str = "set"
+    ): ...
+    def count_neighbors(
+        self,
+        other,
+        r,
+        p: float = 2.0,
+        weights: Incomplete | None = None,
+        cumulative: bool = True,
+    ): ...
+    def sparse_distance_matrix(
+        self, other, max_distance, p: float = 2.0, output_type: str = "dok_matrix"
+    ): ...
 
 def distance_matrix(x, y, p: int = 2, threshold: int = 1000000): ...

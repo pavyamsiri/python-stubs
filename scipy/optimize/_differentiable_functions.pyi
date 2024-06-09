@@ -1,7 +1,13 @@
 from ._hessian_update_strategy import HessianUpdateStrategy as HessianUpdateStrategy
-from ._numdiff import approx_derivative as approx_derivative, group_columns as group_columns
+from ._numdiff import (
+    approx_derivative as approx_derivative,
+    group_columns as group_columns,
+)
 from _typeshed import Incomplete
-from scipy._lib._array_api import array_namespace as array_namespace, atleast_nd as atleast_nd
+from scipy._lib._array_api import (
+    array_namespace as array_namespace,
+    atleast_nd as atleast_nd,
+)
 from scipy.sparse.linalg import LinearOperator as LinearOperator
 
 FD_METHODS: Incomplete
@@ -22,7 +28,17 @@ class ScalarFunction:
     H: Incomplete
     x_prev: Incomplete
     g_prev: Incomplete
-    def __init__(self, fun, x0, args, grad, hess, finite_diff_rel_step, finite_diff_bounds, epsilon: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        fun,
+        x0,
+        args,
+        grad,
+        hess,
+        finite_diff_rel_step,
+        finite_diff_bounds,
+        epsilon: Incomplete | None = None,
+    ) -> None: ...
     def fun(self, x): ...
     def grad(self, x): ...
     def hess(self, x): ...
@@ -48,7 +64,17 @@ class VectorFunction:
     H: Incomplete
     x_prev: Incomplete
     J_prev: Incomplete
-    def __init__(self, fun, x0, jac, hess, finite_diff_rel_step, finite_diff_jac_sparsity, finite_diff_bounds, sparse_jacobian) -> None: ...
+    def __init__(
+        self,
+        fun,
+        x0,
+        jac,
+        hess,
+        finite_diff_rel_step,
+        finite_diff_jac_sparsity,
+        finite_diff_bounds,
+        sparse_jacobian,
+    ) -> None: ...
     def fun(self, x): ...
     def jac(self, x): ...
     def hess(self, x, v): ...

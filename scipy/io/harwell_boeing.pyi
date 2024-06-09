@@ -1,4 +1,16 @@
-__all__ = ['MalformedHeader', 'hb_read', 'hb_write', 'HBInfo', 'HBFile', 'HBMatrixType', 'FortranFormatParser', 'IntFormat', 'ExpFormat', 'BadFortranFormat', 'hb']
+__all__ = [
+    "MalformedHeader",
+    "hb_read",
+    "hb_write",
+    "HBInfo",
+    "HBFile",
+    "HBMatrixType",
+    "FortranFormatParser",
+    "IntFormat",
+    "ExpFormat",
+    "BadFortranFormat",
+    "hb",
+]
 
 # Names in __all__ with no definition:
 #   BadFortranFormat

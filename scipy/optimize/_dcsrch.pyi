@@ -23,6 +23,12 @@ class DCSRCH:
     phi: Incomplete
     derphi: Incomplete
     def __init__(self, phi, derphi, ftol, gtol, xtol, stpmin, stpmax) -> None: ...
-    def __call__(self, alpha1, phi0: Incomplete | None = None, derphi0: Incomplete | None = None, maxiter: int = 100): ...
+    def __call__(
+        self,
+        alpha1,
+        phi0: Incomplete | None = None,
+        derphi0: Incomplete | None = None,
+        maxiter: int = 100,
+    ): ...
 
 def dcstep(stx, fx, dx, sty, fy, dy, stp, fp, dp, brackt, stpmin, stpmax): ...

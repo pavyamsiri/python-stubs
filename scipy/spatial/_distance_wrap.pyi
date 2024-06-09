@@ -1,4 +1,7 @@
-from scipy.spatial.distance import cdist_correlation_double_wrap as cdist_correlation_double_wrap, pdist_correlation_double_wrap as pdist_correlation_double_wrap
+from scipy.spatial.distance import (
+    cdist_correlation_double_wrap as cdist_correlation_double_wrap,
+    pdist_correlation_double_wrap as pdist_correlation_double_wrap,
+)
 
 def cdist_braycurtis_double_wrap(*args, **kwargs): ...
 def cdist_canberra_double_wrap(*args, **kwargs): ...

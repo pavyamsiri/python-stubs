@@ -1,9 +1,30 @@
 from _typeshed import Incomplete
 
-__all__ = ['UnivariateSpline', 'InterpolatedUnivariateSpline', 'LSQUnivariateSpline', 'BivariateSpline', 'LSQBivariateSpline', 'SmoothBivariateSpline', 'LSQSphereBivariateSpline', 'SmoothSphereBivariateSpline', 'RectBivariateSpline', 'RectSphereBivariateSpline']
+__all__ = [
+    "UnivariateSpline",
+    "InterpolatedUnivariateSpline",
+    "LSQUnivariateSpline",
+    "BivariateSpline",
+    "LSQBivariateSpline",
+    "SmoothBivariateSpline",
+    "LSQSphereBivariateSpline",
+    "SmoothSphereBivariateSpline",
+    "RectBivariateSpline",
+    "RectSphereBivariateSpline",
+]
 
 class UnivariateSpline:
-    def __init__(self, x, y, w: Incomplete | None = None, bbox=..., k: int = 3, s: Incomplete | None = None, ext: int = 0, check_finite: bool = False) -> None: ...
+    def __init__(
+        self,
+        x,
+        y,
+        w: Incomplete | None = None,
+        bbox=...,
+        k: int = 3,
+        s: Incomplete | None = None,
+        ext: int = 0,
+        check_finite: bool = False,
+    ) -> None: ...
     @staticmethod
     def validate_input(x, y, w, bbox, k, s, ext, check_finite): ...
     def set_smoothing_factor(self, s) -> None: ...
@@ -18,10 +39,29 @@ class UnivariateSpline:
     def antiderivative(self, n: int = 1): ...
 
 class InterpolatedUnivariateSpline(UnivariateSpline):
-    def __init__(self, x, y, w: Incomplete | None = None, bbox=..., k: int = 3, ext: int = 0, check_finite: bool = False) -> None: ...
+    def __init__(
+        self,
+        x,
+        y,
+        w: Incomplete | None = None,
+        bbox=...,
+        k: int = 3,
+        ext: int = 0,
+        check_finite: bool = False,
+    ) -> None: ...
 
 class LSQUnivariateSpline(UnivariateSpline):
-    def __init__(self, x, y, t, w: Incomplete | None = None, bbox=..., k: int = 3, ext: int = 0, check_finite: bool = False) -> None: ...
+    def __init__(
+        self,
+        x,
+        y,
+        t,
+        w: Incomplete | None = None,
+        bbox=...,
+        k: int = 3,
+        ext: int = 0,
+        check_finite: bool = False,
+    ) -> None: ...
 
 class _BivariateSplineBase:
     def get_residual(self): ...
@@ -43,42 +83,95 @@ class SmoothBivariateSpline(BivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
-    def __init__(self, x, y, z, w: Incomplete | None = None, bbox=..., kx: int = 3, ky: int = 3, s: Incomplete | None = None, eps: float = 1e-16) -> None: ...
+    def __init__(
+        self,
+        x,
+        y,
+        z,
+        w: Incomplete | None = None,
+        bbox=...,
+        kx: int = 3,
+        ky: int = 3,
+        s: Incomplete | None = None,
+        eps: float = 1e-16,
+    ) -> None: ...
 
 class LSQBivariateSpline(BivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
-    def __init__(self, x, y, z, tx, ty, w: Incomplete | None = None, bbox=..., kx: int = 3, ky: int = 3, eps: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        x,
+        y,
+        z,
+        tx,
+        ty,
+        w: Incomplete | None = None,
+        bbox=...,
+        kx: int = 3,
+        ky: int = 3,
+        eps: Incomplete | None = None,
+    ) -> None: ...
 
 class RectBivariateSpline(BivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
-    def __init__(self, x, y, z, bbox=..., kx: int = 3, ky: int = 3, s: int = 0) -> None: ...
+    def __init__(
+        self, x, y, z, bbox=..., kx: int = 3, ky: int = 3, s: int = 0
+    ) -> None: ...
 
 class SphereBivariateSpline(_BivariateSplineBase):
-    def __call__(self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True): ...
+    def __call__(
+        self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True
+    ): ...
     def ev(self, theta, phi, dtheta: int = 0, dphi: int = 0): ...
 
 class SmoothSphereBivariateSpline(SphereBivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
-    def __init__(self, theta, phi, r, w: Incomplete | None = None, s: float = 0.0, eps: float = 1e-16) -> None: ...
-    def __call__(self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True): ...
+    def __init__(
+        self,
+        theta,
+        phi,
+        r,
+        w: Incomplete | None = None,
+        s: float = 0.0,
+        eps: float = 1e-16,
+    ) -> None: ...
+    def __call__(
+        self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True
+    ): ...
 
 class LSQSphereBivariateSpline(SphereBivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
-    def __init__(self, theta, phi, r, tt, tp, w: Incomplete | None = None, eps: float = 1e-16) -> None: ...
-    def __call__(self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True): ...
+    def __init__(
+        self, theta, phi, r, tt, tp, w: Incomplete | None = None, eps: float = 1e-16
+    ) -> None: ...
+    def __call__(
+        self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True
+    ): ...
 
 class RectSphereBivariateSpline(SphereBivariateSpline):
     fp: Incomplete
     tck: Incomplete
     degrees: Incomplete
     v0: Incomplete
-    def __init__(self, u, v, r, s: float = 0.0, pole_continuity: bool = False, pole_values: Incomplete | None = None, pole_exact: bool = False, pole_flat: bool = False) -> None: ...
-    def __call__(self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True): ...
+    def __init__(
+        self,
+        u,
+        v,
+        r,
+        s: float = 0.0,
+        pole_continuity: bool = False,
+        pole_values: Incomplete | None = None,
+        pole_exact: bool = False,
+        pole_flat: bool = False,
+    ) -> None: ...
+    def __call__(
+        self, theta, phi, dtheta: int = 0, dphi: int = 0, grid: bool = True
+    ): ...

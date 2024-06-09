@@ -3,14 +3,25 @@ from ._data import _data_matrix
 from ._matrix import spmatrix
 from _typeshed import Incomplete
 
-__all__ = ['dia_array', 'dia_matrix', 'isspmatrix_dia']
+__all__ = ["dia_array", "dia_matrix", "isspmatrix_dia"]
 
 class _dia_base(_data_matrix):
     data: Incomplete
     offsets: Incomplete
-    def __init__(self, arg1, shape: Incomplete | None = None, dtype: Incomplete | None = None, copy: bool = False) -> None: ...
+    def __init__(
+        self,
+        arg1,
+        shape: Incomplete | None = None,
+        dtype: Incomplete | None = None,
+        copy: bool = False,
+    ) -> None: ...
     def count_nonzero(self): ...
-    def sum(self, axis: Incomplete | None = None, dtype: Incomplete | None = None, out: Incomplete | None = None): ...
+    def sum(
+        self,
+        axis: Incomplete | None = None,
+        dtype: Incomplete | None = None,
+        out: Incomplete | None = None,
+    ): ...
     def todia(self, copy: bool = False): ...
     def transpose(self, axes: Incomplete | None = None, copy: bool = False): ...
     def diagonal(self, k: int = 0): ...

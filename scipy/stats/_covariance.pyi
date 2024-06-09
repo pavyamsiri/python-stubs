@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['Covariance']
+__all__ = ["Covariance"]
 
 class Covariance:
     def __init__(self) -> None: ...

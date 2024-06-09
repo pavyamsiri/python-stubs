@@ -1,7 +1,18 @@
 import numpy as np
 from _typeshed import Incomplete
 
-__all__ = ['upcast', 'getdtype', 'getdata', 'isscalarlike', 'isintlike', 'isshape', 'issequence', 'isdense', 'ismatrix', 'get_sum_dtype']
+__all__ = [
+    "upcast",
+    "getdtype",
+    "getdata",
+    "isscalarlike",
+    "isintlike",
+    "isshape",
+    "issequence",
+    "isdense",
+    "ismatrix",
+    "get_sum_dtype",
+]
 
 def upcast(*args): ...
 def getdtype(dtype, a: Incomplete | None = None, default: Incomplete | None = None): ...

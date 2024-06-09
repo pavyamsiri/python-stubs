@@ -1,3 +1,3 @@
-__all__ = ['orthogonal_procrustes']
+__all__ = ["orthogonal_procrustes"]
 
 def orthogonal_procrustes(A, B, check_finite: bool = True): ...

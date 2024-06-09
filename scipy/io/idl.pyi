@@ -1,4 +1,12 @@
-__all__ = ['readsav', 'DTYPE_DICT', 'RECTYPE_DICT', 'STRUCT_DICT', 'Pointer', 'ObjectPointer', 'AttrDict']
+__all__ = [
+    "readsav",
+    "DTYPE_DICT",
+    "RECTYPE_DICT",
+    "STRUCT_DICT",
+    "Pointer",
+    "ObjectPointer",
+    "AttrDict",
+]
 
 # Names in __all__ with no definition:
 #   AttrDict

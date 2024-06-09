@@ -1,7 +1,28 @@
 from ._miobase import MatFileReader
 from _typeshed import Incomplete
 
-__all__ = ['MatFile4Reader', 'MatFile4Writer', 'SYS_LITTLE_ENDIAN', 'VarHeader4', 'VarReader4', 'VarWriter4', 'arr_to_2d', 'mclass_info', 'mdtypes_template', 'miDOUBLE', 'miINT16', 'miINT32', 'miSINGLE', 'miUINT16', 'miUINT8', 'mxCHAR_CLASS', 'mxFULL_CLASS', 'mxSPARSE_CLASS', 'np_to_mtypes', 'order_codes']
+__all__ = [
+    "MatFile4Reader",
+    "MatFile4Writer",
+    "SYS_LITTLE_ENDIAN",
+    "VarHeader4",
+    "VarReader4",
+    "VarWriter4",
+    "arr_to_2d",
+    "mclass_info",
+    "mdtypes_template",
+    "miDOUBLE",
+    "miINT16",
+    "miINT32",
+    "miSINGLE",
+    "miUINT16",
+    "miUINT8",
+    "mxCHAR_CLASS",
+    "mxFULL_CLASS",
+    "mxSPARSE_CLASS",
+    "np_to_mtypes",
+    "order_codes",
+]
 
 SYS_LITTLE_ENDIAN: Incomplete
 miDOUBLE: int
@@ -53,7 +74,7 @@ class MatFile4Reader(MatFileReader):
     def get_variables(self, variable_names: Incomplete | None = None): ...
     def list_variables(self): ...
 
-def arr_to_2d(arr, oned_as: str = 'row'): ...
+def arr_to_2d(arr, oned_as: str = "row"): ...
 
 class VarWriter4:
     file_stream: Incomplete

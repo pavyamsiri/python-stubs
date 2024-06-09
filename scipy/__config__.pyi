@@ -1,6 +1,6 @@
 from enum import Enum
 
-__all__ = ['show']
+__all__ = ["show"]
 
 class DisplayModes(Enum):
     stdout: str

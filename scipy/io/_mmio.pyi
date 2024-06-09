@@ -1,10 +1,17 @@
 from _typeshed import Incomplete
 
-__all__ = ['mminfo', 'mmread', 'mmwrite', 'MMFile']
+__all__ = ["mminfo", "mmread", "mmwrite", "MMFile"]
 
 def mminfo(source): ...
 def mmread(source): ...
-def mmwrite(target, a, comment: str = '', field: Incomplete | None = None, precision: Incomplete | None = None, symmetry: Incomplete | None = None) -> None: ...
+def mmwrite(
+    target,
+    a,
+    comment: str = "",
+    field: Incomplete | None = None,
+    precision: Incomplete | None = None,
+    symmetry: Incomplete | None = None,
+) -> None: ...
 
 class MMFile:
     @property
@@ -44,4 +51,12 @@ class MMFile:
     def info(self, source): ...
     def __init__(self, **kwargs) -> None: ...
     def read(self, source): ...
-    def write(self, target, a, comment: str = '', field: Incomplete | None = None, precision: Incomplete | None = None, symmetry: Incomplete | None = None) -> None: ...
+    def write(
+        self,
+        target,
+        a,
+        comment: str = "",
+        field: Incomplete | None = None,
+        precision: Incomplete | None = None,
+        symmetry: Incomplete | None = None,
+    ) -> None: ...

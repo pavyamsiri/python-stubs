@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['MetaData', 'loadarff', 'ArffError', 'ParseArffError']
+__all__ = ["MetaData", "loadarff", "ArffError", "ParseArffError"]
 
 class ArffError(OSError): ...
 class ParseArffError(ArffError): ...

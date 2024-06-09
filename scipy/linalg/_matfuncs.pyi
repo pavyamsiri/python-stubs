@@ -1,7 +1,23 @@
 from ._expm_frechet import expm_cond as expm_cond, expm_frechet as expm_frechet
 from ._matfuncs_sqrtm import sqrtm as sqrtm
 
-__all__ = ['expm', 'cosm', 'sinm', 'tanm', 'coshm', 'sinhm', 'tanhm', 'logm', 'funm', 'signm', 'sqrtm', 'fractional_matrix_power', 'expm_frechet', 'expm_cond', 'khatri_rao']
+__all__ = [
+    "expm",
+    "cosm",
+    "sinm",
+    "tanm",
+    "coshm",
+    "sinhm",
+    "tanhm",
+    "logm",
+    "funm",
+    "signm",
+    "sqrtm",
+    "fractional_matrix_power",
+    "expm_frechet",
+    "expm_cond",
+    "khatri_rao",
+]
 
 def fractional_matrix_power(A, t): ...
 def logm(A, disp: bool = True): ...

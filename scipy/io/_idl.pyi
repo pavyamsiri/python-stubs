@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['readsav']
+__all__ = ["readsav"]
 
 class Pointer:
     index: Incomplete
@@ -16,4 +16,10 @@ class AttrDict(dict):
     __setattr__ = __setitem__
     __call__ = __getitem__
 
-def readsav(file_name, idict: Incomplete | None = None, python_dict: bool = False, uncompressed_file_name: Incomplete | None = None, verbose: bool = False): ...
+def readsav(
+    file_name,
+    idict: Incomplete | None = None,
+    python_dict: bool = False,
+    uncompressed_file_name: Incomplete | None = None,
+    verbose: bool = False,
+): ...

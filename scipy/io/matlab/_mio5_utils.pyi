@@ -1,7 +1,10 @@
 import _cython_3_0_10
 import scipy.io.matlab._mio5_params as mio5p
 from _typeshed import Incomplete
-from scipy.io.matlab._mio_utils import chars_to_strings as chars_to_strings, squeeze_element as squeeze_element
+from scipy.io.matlab._mio_utils import (
+    chars_to_strings as chars_to_strings,
+    squeeze_element as squeeze_element,
+)
 from scipy.sparse._csc import csc_matrix as csc_matrix
 from typing import ClassVar
 

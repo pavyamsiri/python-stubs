@@ -1,6 +1,6 @@
 from enum import IntEnum
 
-__all__ = ['WavFileWarning', 'read', 'write']
+__all__ = ["WavFileWarning", "read", "write"]
 
 class WavFileWarning(UserWarning): ...
 

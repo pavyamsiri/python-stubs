@@ -1,6 +1,17 @@
 from _typeshed import Incomplete
 
-__all__ = ['diff', 'tilbert', 'itilbert', 'hilbert', 'ihilbert', 'cs_diff', 'cc_diff', 'sc_diff', 'ss_diff', 'shift']
+__all__ = [
+    "diff",
+    "tilbert",
+    "itilbert",
+    "hilbert",
+    "ihilbert",
+    "cs_diff",
+    "cc_diff",
+    "sc_diff",
+    "ss_diff",
+    "shift",
+]
 
 def diff(x, order: int = 1, period: Incomplete | None = None, _cache=...): ...
 def tilbert(x, h, period: Incomplete | None = None, _cache=...): ...

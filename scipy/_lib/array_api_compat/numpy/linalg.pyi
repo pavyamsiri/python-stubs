@@ -1,8 +1,57 @@
 from numpy.linalg import *
-from ._aliases import matmul as matmul, matrix_transpose as matrix_transpose, tensordot as tensordot, vecdot as vecdot
+from ._aliases import (
+    matmul as matmul,
+    matrix_transpose as matrix_transpose,
+    tensordot as tensordot,
+    vecdot as vecdot,
+)
 from _typeshed import Incomplete
 
-__all__ = ['matrix_power', 'solve', 'tensorsolve', 'tensorinv', 'inv', 'cholesky', 'eigvals', 'eigvalsh', 'pinv', 'slogdet', 'det', 'svd', 'eig', 'eigh', 'lstsq', 'norm', 'qr', 'cond', 'matrix_rank', 'LinAlgError', 'multi_dot', 'cross', 'matmul', 'outer', 'tensordot', 'EighResult', 'QRResult', 'SlogdetResult', 'SVDResult', 'eigh', 'qr', 'slogdet', 'svd', 'cholesky', 'matrix_rank', 'pinv', 'matrix_norm', 'matrix_transpose', 'svdvals', 'vecdot', 'vector_norm', 'diagonal', 'trace']
+__all__ = [
+    "matrix_power",
+    "solve",
+    "tensorsolve",
+    "tensorinv",
+    "inv",
+    "cholesky",
+    "eigvals",
+    "eigvalsh",
+    "pinv",
+    "slogdet",
+    "det",
+    "svd",
+    "eig",
+    "eigh",
+    "lstsq",
+    "norm",
+    "qr",
+    "cond",
+    "matrix_rank",
+    "LinAlgError",
+    "multi_dot",
+    "cross",
+    "matmul",
+    "outer",
+    "tensordot",
+    "EighResult",
+    "QRResult",
+    "SlogdetResult",
+    "SVDResult",
+    "eigh",
+    "qr",
+    "slogdet",
+    "svd",
+    "cholesky",
+    "matrix_rank",
+    "pinv",
+    "matrix_norm",
+    "matrix_transpose",
+    "svdvals",
+    "vecdot",
+    "vector_norm",
+    "diagonal",
+    "trace",
+]
 
 cross: Incomplete
 outer: Incomplete

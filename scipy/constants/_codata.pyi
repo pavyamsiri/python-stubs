@@ -1,6 +1,13 @@
 from typing import Any
 
-__all__ = ['physical_constants', 'value', 'unit', 'precision', 'find', 'ConstantWarning']
+__all__ = [
+    "physical_constants",
+    "value",
+    "unit",
+    "precision",
+    "find",
+    "ConstantWarning",
+]
 
 physical_constants: dict[str, tuple[float, str, float]]
 

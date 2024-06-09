@@ -1,6 +1,33 @@
 from _typeshed import Incomplete
 
-__all__ = ['boxcar', 'triang', 'parzen', 'bohman', 'blackman', 'nuttall', 'blackmanharris', 'flattop', 'bartlett', 'barthann', 'hamming', 'kaiser', 'kaiser_bessel_derived', 'gaussian', 'general_cosine', 'general_gaussian', 'general_hamming', 'chebwin', 'cosine', 'hann', 'exponential', 'tukey', 'taylor', 'dpss', 'get_window', 'lanczos']
+__all__ = [
+    "boxcar",
+    "triang",
+    "parzen",
+    "bohman",
+    "blackman",
+    "nuttall",
+    "blackmanharris",
+    "flattop",
+    "bartlett",
+    "barthann",
+    "hamming",
+    "kaiser",
+    "kaiser_bessel_derived",
+    "gaussian",
+    "general_cosine",
+    "general_gaussian",
+    "general_hamming",
+    "chebwin",
+    "cosine",
+    "hann",
+    "exponential",
+    "tukey",
+    "taylor",
+    "dpss",
+    "get_window",
+    "lanczos",
+]
 
 def general_cosine(M, a, sym: bool = True): ...
 def boxcar(M, sym: bool = True): ...
@@ -23,8 +50,17 @@ def gaussian(M, std, sym: bool = True): ...
 def general_gaussian(M, p, sig, sym: bool = True): ...
 def chebwin(M, at, sym: bool = True): ...
 def cosine(M, sym: bool = True): ...
-def exponential(M, center: Incomplete | None = None, tau: float = 1.0, sym: bool = True): ...
+def exponential(
+    M, center: Incomplete | None = None, tau: float = 1.0, sym: bool = True
+): ...
 def taylor(M, nbar: int = 4, sll: int = 30, norm: bool = True, sym: bool = True): ...
-def dpss(M, NW, Kmax: Incomplete | None = None, sym: bool = True, norm: Incomplete | None = None, return_ratios: bool = False): ...
+def dpss(
+    M,
+    NW,
+    Kmax: Incomplete | None = None,
+    sym: bool = True,
+    norm: Incomplete | None = None,
+    return_ratios: bool = False,
+): ...
 def lanczos(M, *, sym: bool = True): ...
 def get_window(window, Nx, fftbins: bool = True): ...

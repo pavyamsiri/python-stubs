@@ -1,4 +1,13 @@
-__all__ = ['LinearOperator', 'aslinearoperator', 'isshape', 'isintlike', 'asmatrix', 'is_pydata_spmatrix', 'MatrixLinearOperator', 'IdentityOperator']
+__all__ = [
+    "LinearOperator",
+    "aslinearoperator",
+    "isshape",
+    "isintlike",
+    "asmatrix",
+    "is_pydata_spmatrix",
+    "MatrixLinearOperator",
+    "IdentityOperator",
+]
 
 # Names in __all__ with no definition:
 #   IdentityOperator

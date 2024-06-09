@@ -1,5 +1,5 @@
 from _typeshed import Incomplete
 
-__all__ = ['docfiller']
+__all__ = ["docfiller"]
 
 docfiller: Incomplete

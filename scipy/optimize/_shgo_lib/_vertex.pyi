@@ -8,7 +8,9 @@ class VertexBase(ABC, metaclass=abc.ABCMeta):
     hash: Incomplete
     nn: Incomplete
     index: Incomplete
-    def __init__(self, x, nn: Incomplete | None = None, index: Incomplete | None = None) -> None: ...
+    def __init__(
+        self, x, nn: Incomplete | None = None, index: Incomplete | None = None
+    ) -> None: ...
     def __hash__(self): ...
     x_a: Incomplete
     def __getattr__(self, item): ...
@@ -22,14 +24,34 @@ class VertexBase(ABC, metaclass=abc.ABCMeta):
 class VertexScalarField(VertexBase):
     check_min: bool
     check_max: bool
-    def __init__(self, x, field: Incomplete | None = None, nn: Incomplete | None = None, index: Incomplete | None = None, field_args=(), g_cons: Incomplete | None = None, g_cons_args=()) -> None: ...
+    def __init__(
+        self,
+        x,
+        field: Incomplete | None = None,
+        nn: Incomplete | None = None,
+        index: Incomplete | None = None,
+        field_args=(),
+        g_cons: Incomplete | None = None,
+        g_cons_args=(),
+    ) -> None: ...
     def connect(self, v) -> None: ...
     def disconnect(self, v) -> None: ...
     def minimiser(self): ...
     def maximiser(self): ...
 
 class VertexVectorField(VertexBase, metaclass=abc.ABCMeta):
-    def __init__(self, x, sfield: Incomplete | None = None, vfield: Incomplete | None = None, field_args=(), vfield_args=(), g_cons: Incomplete | None = None, g_cons_args=(), nn: Incomplete | None = None, index: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        x,
+        sfield: Incomplete | None = None,
+        vfield: Incomplete | None = None,
+        field_args=(),
+        vfield_args=(),
+        g_cons: Incomplete | None = None,
+        g_cons_args=(),
+        nn: Incomplete | None = None,
+        index: Incomplete | None = None,
+    ) -> None: ...
 
 class VertexCacheBase:
     cache: Incomplete
@@ -41,7 +63,9 @@ class VertexCacheBase:
     def print_out(self) -> None: ...
 
 class VertexCube(VertexBase):
-    def __init__(self, x, nn: Incomplete | None = None, index: Incomplete | None = None) -> None: ...
+    def __init__(
+        self, x, nn: Incomplete | None = None, index: Incomplete | None = None
+    ) -> None: ...
     def connect(self, v) -> None: ...
     def disconnect(self, v) -> None: ...
 
@@ -65,7 +89,14 @@ class VertexCacheField(VertexCacheBase):
     workers: Incomplete
     process_gpool: Incomplete
     process_fpool: Incomplete
-    def __init__(self, field: Incomplete | None = None, field_args=(), g_cons: Incomplete | None = None, g_cons_args=(), workers: int = 1) -> None: ...
+    def __init__(
+        self,
+        field: Incomplete | None = None,
+        field_args=(),
+        g_cons: Incomplete | None = None,
+        g_cons_args=(),
+        workers: int = 1,
+    ) -> None: ...
     def __getitem__(self, x, nn: Incomplete | None = None): ...
     def process_pools(self) -> None: ...
     def feasibility_check(self, v) -> None: ...

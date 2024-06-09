@@ -1,8 +1,15 @@
 from _typeshed import Incomplete
 
-__all__ = ['svd', 'svdvals', 'diagsvd', 'orth', 'subspace_angles', 'null_space']
+__all__ = ["svd", "svdvals", "diagsvd", "orth", "subspace_angles", "null_space"]
 
-def svd(a, full_matrices: bool = True, compute_uv: bool = True, overwrite_a: bool = False, check_finite: bool = True, lapack_driver: str = 'gesdd'): ...
+def svd(
+    a,
+    full_matrices: bool = True,
+    compute_uv: bool = True,
+    overwrite_a: bool = False,
+    check_finite: bool = True,
+    lapack_driver: str = "gesdd",
+): ...
 def svdvals(a, overwrite_a: bool = False, check_finite: bool = True): ...
 def diagsvd(s, M, N): ...
 def orth(A, rcond: Incomplete | None = None): ...

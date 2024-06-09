@@ -1,4 +1,11 @@
-__all__ = ['lu', 'lu_solve', 'lu_factor', 'asarray_chkfinite', 'LinAlgWarning', 'get_lapack_funcs']
+__all__ = [
+    "lu",
+    "lu_solve",
+    "lu_factor",
+    "asarray_chkfinite",
+    "LinAlgWarning",
+    "get_lapack_funcs",
+]
 
 # Names in __all__ with no definition:
 #   LinAlgWarning

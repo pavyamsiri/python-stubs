@@ -2,7 +2,9 @@ from _typeshed import Incomplete
 from scipy.special._testutils import assert_func_equal as assert_func_equal
 
 class Arg:
-    def __init__(self, a=..., b=..., inclusive_a: bool = True, inclusive_b: bool = True) -> None: ...
+    def __init__(
+        self, a=..., b=..., inclusive_a: bool = True, inclusive_b: bool = True
+    ) -> None: ...
     def values(self, n): ...
 
 class FixedArg:
@@ -38,7 +40,22 @@ class MpmathData:
     distinguish_nan_and_inf: Incomplete
     name: Incomplete
     param_filter: Incomplete
-    def __init__(self, scipy_func, mpmath_func, arg_spec, name: Incomplete | None = None, dps: Incomplete | None = None, prec: Incomplete | None = None, n: Incomplete | None = None, rtol: float = 1e-07, atol: float = 1e-300, ignore_inf_sign: bool = False, distinguish_nan_and_inf: bool = True, nan_ok: bool = True, param_filter: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        scipy_func,
+        mpmath_func,
+        arg_spec,
+        name: Incomplete | None = None,
+        dps: Incomplete | None = None,
+        prec: Incomplete | None = None,
+        n: Incomplete | None = None,
+        rtol: float = 1e-07,
+        atol: float = 1e-300,
+        ignore_inf_sign: bool = False,
+        distinguish_nan_and_inf: bool = True,
+        nan_ok: bool = True,
+        param_filter: Incomplete | None = None,
+    ) -> None: ...
     def check(self): ...
 
 def assert_mpmath_equal(*a, **kw) -> None: ...

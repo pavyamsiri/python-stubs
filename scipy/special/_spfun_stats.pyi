@@ -1,3 +1,3 @@
-__all__ = ['multigammaln']
+__all__ = ["multigammaln"]
 
 def multigammaln(a, d): ...

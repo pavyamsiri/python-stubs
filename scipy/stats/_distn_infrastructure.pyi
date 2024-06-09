@@ -24,10 +24,12 @@ class rv_frozen:
     def logcdf(self, x): ...
     def ppf(self, q): ...
     def isf(self, q): ...
-    def rvs(self, size: Incomplete | None = None, random_state: Incomplete | None = None): ...
+    def rvs(
+        self, size: Incomplete | None = None, random_state: Incomplete | None = None
+    ): ...
     def sf(self, x): ...
     def logsf(self, x): ...
-    def stats(self, moments: str = 'mv'): ...
+    def stats(self, moments: str = "mv"): ...
     def median(self): ...
     def mean(self): ...
     def var(self): ...
@@ -35,7 +37,14 @@ class rv_frozen:
     def moment(self, order: Incomplete | None = None): ...
     def entropy(self): ...
     def interval(self, confidence: Incomplete | None = None): ...
-    def expect(self, func: Incomplete | None = None, lb: Incomplete | None = None, ub: Incomplete | None = None, conditional: bool = False, **kwds): ...
+    def expect(
+        self,
+        func: Incomplete | None = None,
+        lb: Incomplete | None = None,
+        ub: Incomplete | None = None,
+        conditional: bool = False,
+        **kwds,
+    ): ...
     def support(self): ...
 
 class rv_discrete_frozen(rv_frozen):
@@ -74,7 +83,9 @@ class _ShapeInfo:
     name: Incomplete
     integrality: Incomplete
     domain: Incomplete
-    def __init__(self, name, integrality: bool = False, domain=..., inclusive=(True, True)) -> None: ...
+    def __init__(
+        self, name, integrality: bool = False, domain=..., inclusive=(True, True)
+    ) -> None: ...
 
 class rv_continuous(rv_generic):
     badvalue: Incomplete
@@ -84,7 +95,18 @@ class rv_continuous(rv_generic):
     xtol: Incomplete
     moment_type: Incomplete
     shapes: Incomplete
-    def __init__(self, momtype: int = 1, a: Incomplete | None = None, b: Incomplete | None = None, xtol: float = 1e-14, badvalue: Incomplete | None = None, name: Incomplete | None = None, longname: Incomplete | None = None, shapes: Incomplete | None = None, seed: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        momtype: int = 1,
+        a: Incomplete | None = None,
+        b: Incomplete | None = None,
+        xtol: float = 1e-14,
+        badvalue: Incomplete | None = None,
+        name: Incomplete | None = None,
+        longname: Incomplete | None = None,
+        shapes: Incomplete | None = None,
+        seed: Incomplete | None = None,
+    ) -> None: ...
     def pdf(self, x, *args, **kwds): ...
     def logpdf(self, x, *args, **kwds): ...
     def cdf(self, x, *args, **kwds): ...
@@ -95,17 +117,51 @@ class rv_continuous(rv_generic):
     def isf(self, q, *args, **kwds): ...
     def fit(self, data, *args, **kwds): ...
     def fit_loc_scale(self, data, *args): ...
-    def expect(self, func: Incomplete | None = None, args=(), loc: int = 0, scale: int = 1, lb: Incomplete | None = None, ub: Incomplete | None = None, conditional: bool = False, **kwds): ...
+    def expect(
+        self,
+        func: Incomplete | None = None,
+        args=(),
+        loc: int = 0,
+        scale: int = 1,
+        lb: Incomplete | None = None,
+        ub: Incomplete | None = None,
+        conditional: bool = False,
+        **kwds,
+    ): ...
 
 class rv_discrete(rv_generic):
-    def __new__(cls, a: int = 0, b=..., name: Incomplete | None = None, badvalue: Incomplete | None = None, moment_tol: float = 1e-08, values: Incomplete | None = None, inc: int = 1, longname: Incomplete | None = None, shapes: Incomplete | None = None, seed: Incomplete | None = None): ...
+    def __new__(
+        cls,
+        a: int = 0,
+        b=...,
+        name: Incomplete | None = None,
+        badvalue: Incomplete | None = None,
+        moment_tol: float = 1e-08,
+        values: Incomplete | None = None,
+        inc: int = 1,
+        longname: Incomplete | None = None,
+        shapes: Incomplete | None = None,
+        seed: Incomplete | None = None,
+    ): ...
     badvalue: Incomplete
     a: Incomplete
     b: Incomplete
     moment_tol: Incomplete
     inc: Incomplete
     shapes: Incomplete
-    def __init__(self, a: int = 0, b=..., name: Incomplete | None = None, badvalue: Incomplete | None = None, moment_tol: float = 1e-08, values: Incomplete | None = None, inc: int = 1, longname: Incomplete | None = None, shapes: Incomplete | None = None, seed: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        a: int = 0,
+        b=...,
+        name: Incomplete | None = None,
+        badvalue: Incomplete | None = None,
+        moment_tol: float = 1e-08,
+        values: Incomplete | None = None,
+        inc: int = 1,
+        longname: Incomplete | None = None,
+        shapes: Incomplete | None = None,
+        seed: Incomplete | None = None,
+    ) -> None: ...
     def rvs(self, *args, **kwargs): ...
     def pmf(self, k, *args, **kwds): ...
     def logpmf(self, k, *args, **kwds): ...
@@ -115,7 +171,18 @@ class rv_discrete(rv_generic):
     def logsf(self, k, *args, **kwds): ...
     def ppf(self, q, *args, **kwds): ...
     def isf(self, q, *args, **kwds): ...
-    def expect(self, func: Incomplete | None = None, args=(), loc: int = 0, lb: Incomplete | None = None, ub: Incomplete | None = None, conditional: bool = False, maxcount: int = 1000, tolerance: float = 1e-10, chunksize: int = 32): ...
+    def expect(
+        self,
+        func: Incomplete | None = None,
+        args=(),
+        loc: int = 0,
+        lb: Incomplete | None = None,
+        ub: Incomplete | None = None,
+        conditional: bool = False,
+        maxcount: int = 1000,
+        tolerance: float = 1e-10,
+        chunksize: int = 32,
+    ): ...
 
 class rv_sample(rv_discrete):
     badvalue: Incomplete
@@ -128,7 +195,19 @@ class rv_sample(rv_discrete):
     a: Incomplete
     b: Incomplete
     qvals: Incomplete
-    def __init__(self, a: int = 0, b=..., name: Incomplete | None = None, badvalue: Incomplete | None = None, moment_tol: float = 1e-08, values: Incomplete | None = None, inc: int = 1, longname: Incomplete | None = None, shapes: Incomplete | None = None, seed: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        a: int = 0,
+        b=...,
+        name: Incomplete | None = None,
+        badvalue: Incomplete | None = None,
+        moment_tol: float = 1e-08,
+        values: Incomplete | None = None,
+        inc: int = 1,
+        longname: Incomplete | None = None,
+        shapes: Incomplete | None = None,
+        seed: Incomplete | None = None,
+    ) -> None: ...
     def generic_moment(self, n): ...
 
 def get_distribution_names(namespace_pairs, rv_base_class): ...

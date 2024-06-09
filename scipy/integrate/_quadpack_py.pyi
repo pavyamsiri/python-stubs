@@ -1,13 +1,48 @@
 from _typeshed import Incomplete
 
-__all__ = ['quad', 'dblquad', 'tplquad', 'nquad', 'IntegrationWarning']
+__all__ = ["quad", "dblquad", "tplquad", "nquad", "IntegrationWarning"]
 
 class IntegrationWarning(UserWarning): ...
 
-def quad(func, a, b, args=(), full_output: int = 0, epsabs: float = 1.49e-08, epsrel: float = 1.49e-08, limit: int = 50, points: Incomplete | None = None, weight: Incomplete | None = None, wvar: Incomplete | None = None, wopts: Incomplete | None = None, maxp1: int = 50, limlst: int = 50, complex_func: bool = False): ...
-def dblquad(func, a, b, gfun, hfun, args=(), epsabs: float = 1.49e-08, epsrel: float = 1.49e-08): ...
-def tplquad(func, a, b, gfun, hfun, qfun, rfun, args=(), epsabs: float = 1.49e-08, epsrel: float = 1.49e-08): ...
-def nquad(func, ranges, args: Incomplete | None = None, opts: Incomplete | None = None, full_output: bool = False): ...
+def quad(
+    func,
+    a,
+    b,
+    args=(),
+    full_output: int = 0,
+    epsabs: float = 1.49e-08,
+    epsrel: float = 1.49e-08,
+    limit: int = 50,
+    points: Incomplete | None = None,
+    weight: Incomplete | None = None,
+    wvar: Incomplete | None = None,
+    wopts: Incomplete | None = None,
+    maxp1: int = 50,
+    limlst: int = 50,
+    complex_func: bool = False,
+): ...
+def dblquad(
+    func, a, b, gfun, hfun, args=(), epsabs: float = 1.49e-08, epsrel: float = 1.49e-08
+): ...
+def tplquad(
+    func,
+    a,
+    b,
+    gfun,
+    hfun,
+    qfun,
+    rfun,
+    args=(),
+    epsabs: float = 1.49e-08,
+    epsrel: float = 1.49e-08,
+): ...
+def nquad(
+    func,
+    ranges,
+    args: Incomplete | None = None,
+    opts: Incomplete | None = None,
+    full_output: bool = False,
+): ...
 
 class _RangeFunc:
     range_: Incomplete

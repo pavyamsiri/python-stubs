@@ -1,4 +1,18 @@
-__all__ = ['BSpline', 'bisplev', 'bisplrep', 'dblint', 'insert', 'spalde', 'splantider', 'splder', 'splev', 'splint', 'splprep', 'splrep', 'sproot']
+__all__ = [
+    "BSpline",
+    "bisplev",
+    "bisplrep",
+    "dblint",
+    "insert",
+    "spalde",
+    "splantider",
+    "splder",
+    "splev",
+    "splint",
+    "splprep",
+    "splrep",
+    "sproot",
+]
 
 # Names in __all__ with no definition:
 #   BSpline

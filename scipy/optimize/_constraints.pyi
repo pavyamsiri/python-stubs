@@ -1,4 +1,8 @@
-from ._differentiable_functions import IdentityVectorFunction as IdentityVectorFunction, LinearVectorFunction as LinearVectorFunction, VectorFunction as VectorFunction
+from ._differentiable_functions import (
+    IdentityVectorFunction as IdentityVectorFunction,
+    LinearVectorFunction as LinearVectorFunction,
+    VectorFunction as VectorFunction,
+)
 from ._hessian_update_strategy import BFGS as BFGS
 from ._optimize import OptimizeWarning as OptimizeWarning
 from _typeshed import Incomplete
@@ -13,7 +17,17 @@ class NonlinearConstraint:
     jac: Incomplete
     hess: Incomplete
     keep_feasible: Incomplete
-    def __init__(self, fun, lb, ub, jac: str = '2-point', hess=..., keep_feasible: bool = False, finite_diff_rel_step: Incomplete | None = None, finite_diff_jac_sparsity: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        fun,
+        lb,
+        ub,
+        jac: str = "2-point",
+        hess=...,
+        keep_feasible: bool = False,
+        finite_diff_rel_step: Incomplete | None = None,
+        finite_diff_jac_sparsity: Incomplete | None = None,
+    ) -> None: ...
 
 class LinearConstraint:
     A: Incomplete
@@ -34,7 +48,13 @@ class PreparedConstraint:
     fun: Incomplete
     bounds: Incomplete
     keep_feasible: Incomplete
-    def __init__(self, constraint, x0, sparse_jacobian: Incomplete | None = None, finite_diff_bounds=...) -> None: ...
+    def __init__(
+        self,
+        constraint,
+        x0,
+        sparse_jacobian: Incomplete | None = None,
+        finite_diff_bounds=...,
+    ) -> None: ...
     def violation(self, x): ...
 
 def new_bounds_to_old(lb, ub, n): ...

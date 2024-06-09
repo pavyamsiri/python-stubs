@@ -1,4 +1,4 @@
-__all__ = ['mvnun', 'mvnun_weighted', 'mvndst', 'dkblck']
+__all__ = ["mvnun", "mvnun_weighted", "mvndst", "dkblck"]
 
 # Names in __all__ with no definition:
 #   dkblck

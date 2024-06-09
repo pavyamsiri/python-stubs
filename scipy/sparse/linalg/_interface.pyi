@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
 
-__all__ = ['LinearOperator', 'aslinearoperator']
+__all__ = ["LinearOperator", "aslinearoperator"]
 
 class LinearOperator:
     ndim: int
@@ -31,7 +31,15 @@ class LinearOperator:
 
 class _CustomLinearOperator(LinearOperator):
     args: Incomplete
-    def __init__(self, shape, matvec, rmatvec: Incomplete | None = None, matmat: Incomplete | None = None, dtype: Incomplete | None = None, rmatmat: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        shape,
+        matvec,
+        rmatvec: Incomplete | None = None,
+        matmat: Incomplete | None = None,
+        dtype: Incomplete | None = None,
+        rmatmat: Incomplete | None = None,
+    ) -> None: ...
 
 class _AdjointLinearOperator(LinearOperator):
     A: Incomplete

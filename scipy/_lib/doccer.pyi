@@ -1,6 +1,16 @@
 from _typeshed import Incomplete
 
-__all__ = ['docformat', 'inherit_docstring_from', 'indentcount_lines', 'filldoc', 'unindent_dict', 'unindent_string', 'extend_notes_in_docstring', 'replace_notes_in_docstring', 'doc_replace']
+__all__ = [
+    "docformat",
+    "inherit_docstring_from",
+    "indentcount_lines",
+    "filldoc",
+    "unindent_dict",
+    "unindent_string",
+    "extend_notes_in_docstring",
+    "replace_notes_in_docstring",
+    "doc_replace",
+]
 
 def docformat(docstring, docdict: Incomplete | None = None): ...
 def inherit_docstring_from(cls): ...

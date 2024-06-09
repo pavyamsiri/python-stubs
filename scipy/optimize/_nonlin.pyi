@@ -1,6 +1,18 @@
 from _typeshed import Incomplete
 
-__all__ = ['broyden1', 'broyden2', 'anderson', 'linearmixing', 'diagbroyden', 'excitingmixing', 'newton_krylov', 'BroydenFirst', 'KrylovJacobian', 'InverseJacobian', 'NoConvergence']
+__all__ = [
+    "broyden1",
+    "broyden2",
+    "anderson",
+    "linearmixing",
+    "diagbroyden",
+    "excitingmixing",
+    "newton_krylov",
+    "BroydenFirst",
+    "KrylovJacobian",
+    "InverseJacobian",
+    "NoConvergence",
+]
 
 class NoConvergence(Exception): ...
 
@@ -13,7 +25,15 @@ class TerminationCondition:
     iter: Incomplete
     f0_norm: Incomplete
     iteration: int
-    def __init__(self, f_tol: Incomplete | None = None, f_rtol: Incomplete | None = None, x_tol: Incomplete | None = None, x_rtol: Incomplete | None = None, iter: Incomplete | None = None, norm=...) -> None: ...
+    def __init__(
+        self,
+        f_tol: Incomplete | None = None,
+        f_rtol: Incomplete | None = None,
+        x_tol: Incomplete | None = None,
+        x_rtol: Incomplete | None = None,
+        iter: Incomplete | None = None,
+        norm=...,
+    ) -> None: ...
     def check(self, f, x, dx): ...
 
 class Jacobian:
@@ -58,7 +78,9 @@ class LowRankMatrix:
     def solve(self, v, tol: int = 0): ...
     def rsolve(self, v, tol: int = 0): ...
     def append(self, c, d) -> None: ...
-    def __array__(self, dtype: Incomplete | None = None, copy: Incomplete | None = None): ...
+    def __array__(
+        self, dtype: Incomplete | None = None, copy: Incomplete | None = None
+    ): ...
     def collapse(self) -> None: ...
     def restart_reduce(self, rank) -> None: ...
     def simple_reduce(self, rank) -> None: ...
@@ -68,7 +90,12 @@ class BroydenFirst(GenericBroyden):
     alpha: Incomplete
     Gm: Incomplete
     max_rank: Incomplete
-    def __init__(self, alpha: Incomplete | None = None, reduction_method: str = 'restart', max_rank: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        alpha: Incomplete | None = None,
+        reduction_method: str = "restart",
+        max_rank: Incomplete | None = None,
+    ) -> None: ...
     def setup(self, x, F, func) -> None: ...
     def todense(self): ...
     def solve(self, f, tol: int = 0): ...
@@ -85,7 +112,9 @@ class Anderson(GenericBroyden):
     df: Incomplete
     gamma: Incomplete
     w0: Incomplete
-    def __init__(self, alpha: Incomplete | None = None, w0: float = 0.01, M: int = 5) -> None: ...
+    def __init__(
+        self, alpha: Incomplete | None = None, w0: float = 0.01, M: int = 5
+    ) -> None: ...
     def solve(self, f, tol: int = 0): ...
     def matvec(self, f): ...
 
@@ -113,7 +142,9 @@ class ExcitingMixing(GenericBroyden):
     alpha: Incomplete
     alphamax: Incomplete
     beta: Incomplete
-    def __init__(self, alpha: Incomplete | None = None, alphamax: float = 1.0) -> None: ...
+    def __init__(
+        self, alpha: Incomplete | None = None, alphamax: float = 1.0
+    ) -> None: ...
     def setup(self, x, F, func) -> None: ...
     def solve(self, f, tol: int = 0): ...
     def matvec(self, f): ...
@@ -126,7 +157,15 @@ class KrylovJacobian(Jacobian):
     rdiff: Incomplete
     method: Incomplete
     method_kw: Incomplete
-    def __init__(self, rdiff: Incomplete | None = None, method: str = 'lgmres', inner_maxiter: int = 20, inner_M: Incomplete | None = None, outer_k: int = 10, **kw) -> None: ...
+    def __init__(
+        self,
+        rdiff: Incomplete | None = None,
+        method: str = "lgmres",
+        inner_maxiter: int = 20,
+        inner_M: Incomplete | None = None,
+        outer_k: int = 10,
+        **kw,
+    ) -> None: ...
     def matvec(self, v): ...
     def solve(self, rhs, tol: int = 0): ...
     x0: Incomplete

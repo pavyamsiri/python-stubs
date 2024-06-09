@@ -14,4 +14,11 @@ class MannwhitneyuResult(NamedTuple):
     statistic: Incomplete
     pvalue: Incomplete
 
-def mannwhitneyu(x, y, use_continuity: bool = True, alternative: str = 'two-sided', axis: int = 0, method: str = 'auto'): ...
+def mannwhitneyu(
+    x,
+    y,
+    use_continuity: bool = True,
+    alternative: str = "two-sided",
+    axis: int = 0,
+    method: str = "auto",
+): ...

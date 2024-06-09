@@ -25,11 +25,36 @@ class FunctionMaker:
     signature: Incomplete
     dict: Incomplete
     defaults: Incomplete
-    def __init__(self, func: Incomplete | None = None, name: Incomplete | None = None, signature: Incomplete | None = None, defaults: Incomplete | None = None, doc: Incomplete | None = None, module: Incomplete | None = None, funcdict: Incomplete | None = None) -> None: ...
+    def __init__(
+        self,
+        func: Incomplete | None = None,
+        name: Incomplete | None = None,
+        signature: Incomplete | None = None,
+        defaults: Incomplete | None = None,
+        doc: Incomplete | None = None,
+        module: Incomplete | None = None,
+        funcdict: Incomplete | None = None,
+    ) -> None: ...
     def update(self, func, **kw) -> None: ...
-    def make(self, src_templ, evaldict: Incomplete | None = None, addsource: bool = False, **attrs): ...
+    def make(
+        self,
+        src_templ,
+        evaldict: Incomplete | None = None,
+        addsource: bool = False,
+        **attrs,
+    ): ...
     @classmethod
-    def create(cls, obj, body, evaldict, defaults: Incomplete | None = None, doc: Incomplete | None = None, module: Incomplete | None = None, addsource: bool = True, **attrs): ...
+    def create(
+        cls,
+        obj,
+        body,
+        evaldict,
+        defaults: Incomplete | None = None,
+        doc: Incomplete | None = None,
+        module: Incomplete | None = None,
+        addsource: bool = True,
+        **attrs,
+    ): ...
 
 def decorate(func, caller): ...
 def decorator(caller, _func: Incomplete | None = None): ...

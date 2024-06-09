@@ -1,4 +1,4 @@
-__all__ = ['fftshift', 'ifftshift', 'fftfreq', 'rfftfreq', 'next_fast_len']
+__all__ = ["fftshift", "ifftshift", "fftfreq", "rfftfreq", "next_fast_len"]
 
 # Names in __all__ with no definition:
 #   fftfreq

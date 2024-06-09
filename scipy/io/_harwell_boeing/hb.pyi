@@ -1,13 +1,20 @@
 from _typeshed import Incomplete
 
-__all__ = ['MalformedHeader', 'hb_read', 'hb_write', 'HBInfo', 'HBFile', 'HBMatrixType']
+__all__ = ["MalformedHeader", "hb_read", "hb_write", "HBInfo", "HBFile", "HBMatrixType"]
 
 class MalformedHeader(Exception): ...
 class LineOverflow(Warning): ...
 
 class HBInfo:
     @classmethod
-    def from_data(cls, m, title: str = 'Default title', key: str = '0', mxtype: Incomplete | None = None, fmt: Incomplete | None = None): ...
+    def from_data(
+        cls,
+        m,
+        title: str = "Default title",
+        key: str = "0",
+        mxtype: Incomplete | None = None,
+        fmt: Incomplete | None = None,
+    ): ...
     @classmethod
     def from_file(cls, fid): ...
     title: Incomplete
@@ -30,7 +37,24 @@ class HBInfo:
     nnon_zeros: Incomplete
     nelementals: Incomplete
     mxtype: Incomplete
-    def __init__(self, title, key, total_nlines, pointer_nlines, indices_nlines, values_nlines, mxtype, nrows, ncols, nnon_zeros, pointer_format_str, indices_format_str, values_format_str, right_hand_sides_nlines: int = 0, nelementals: int = 0) -> None: ...
+    def __init__(
+        self,
+        title,
+        key,
+        total_nlines,
+        pointer_nlines,
+        indices_nlines,
+        values_nlines,
+        mxtype,
+        nrows,
+        ncols,
+        nnon_zeros,
+        pointer_format_str,
+        indices_format_str,
+        values_format_str,
+        right_hand_sides_nlines: int = 0,
+        nelementals: int = 0,
+    ) -> None: ...
     def dump(self): ...
 
 class HBMatrixType:
@@ -39,7 +63,7 @@ class HBMatrixType:
     value_type: Incomplete
     structure: Incomplete
     storage: Incomplete
-    def __init__(self, value_type, structure, storage: str = 'assembled') -> None: ...
+    def __init__(self, value_type, structure, storage: str = "assembled") -> None: ...
     @property
     def fortran_format(self): ...
 
