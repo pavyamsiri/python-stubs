@@ -1,3 +1,36 @@
+from ._mio4 import (
+    SYS_LITTLE_ENDIAN,
+    MatFile4Reader,
+    MatFile4Writer,
+    MatFileReader,
+    VarHeader4,
+    VarReader4,
+    VarWriter4,
+    arr_to_2d,
+    mclass_info,
+    mdtypes_template,
+    miDOUBLE,
+    miINT16,
+    miINT32,
+    miSINGLE,
+    miUINT8,
+    miUINT16,
+    mxCHAR_CLASS,
+    mxFULL_CLASS,
+    mxSPARSE_CLASS,
+    np_to_mtypes,
+    order_codes,
+)
+from ._mio_utils import chars_to_strings, squeeze_element
+from ._miobase import (
+    arr_dtype_number,
+    arr_to_chars,
+    convert_dtypes,
+    docfiller,
+    matdims,
+    read_dtype,
+)
+
 __all__ = [
     "MatFile4Reader",
     "MatFile4Writer",
@@ -29,34 +62,3 @@ __all__ = [
     "squeeze_element",
     "chars_to_strings",
 ]
-
-# Names in __all__ with no definition:
-#   MatFile4Reader
-#   MatFile4Writer
-#   MatFileReader
-#   SYS_LITTLE_ENDIAN
-#   VarHeader4
-#   VarReader4
-#   VarWriter4
-#   arr_dtype_number
-#   arr_to_2d
-#   arr_to_chars
-#   chars_to_strings
-#   convert_dtypes
-#   docfiller
-#   matdims
-#   mclass_info
-#   mdtypes_template
-#   miDOUBLE
-#   miINT16
-#   miINT32
-#   miSINGLE
-#   miUINT16
-#   miUINT8
-#   mxCHAR_CLASS
-#   mxFULL_CLASS
-#   mxSPARSE_CLASS
-#   np_to_mtypes
-#   order_codes
-#   read_dtype
-#   squeeze_element

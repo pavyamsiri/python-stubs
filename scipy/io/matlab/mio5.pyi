@@ -1,8 +1,53 @@
+from ._byteordercodes import native_code, swapped_code
+from ._mio5 import (
+    NDT_ARRAY_FLAGS,
+    NDT_FILE_HDR,
+    NDT_TAG_FULL,
+    NDT_TAG_SMALL,
+    EmptyStructMarker,
+    MatFile5Reader,
+    MatFile5Writer,
+    VarWriter5,
+    to_writeable,
+    varmats_from_mat,
+)
+from ._mio5_params import (
+    MDTYPES,
+    NP_TO_MTYPES,
+    NP_TO_MXTYPES,
+    MatlabFunction,
+    MatlabObject,
+    mat_struct,
+    mclass_info,
+    miCOMPRESSED,
+    miINT8,
+    miMATRIX,
+    miUINT32,
+    miUTF8,
+    mxCELL_CLASS,
+    mxCHAR_CLASS,
+    mxDOUBLE_CLASS,
+    mxOBJECT_CLASS,
+    mxSPARSE_CLASS,
+    mxSTRUCT_CLASS,
+)
+from ._mio5_utils import VarReader5
+from ._miobase import (
+    MatFileReader,
+    MatReadError,
+    MatReadWarning,
+    MatWriteError,
+    arr_dtype_number,
+    arr_to_chars,
+    docfiller,
+    matdims,
+    read_dtype,
+)
+
 __all__ = [
     "mclass_info",
     "mxCHAR_CLASS",
     "mxSPARSE_CLASS",
-    "BytesIO",
     "native_code",
     "swapped_code",
     "MatFileReader",
@@ -30,7 +75,6 @@ __all__ = [
     "mxOBJECT_CLASS",
     "mxDOUBLE_CLASS",
     "mat_struct",
-    "ZlibInputStream",
     "MatFile5Reader",
     "varmats_from_mat",
     "EmptyStructMarker",
@@ -42,47 +86,3 @@ __all__ = [
     "VarWriter5",
     "MatFile5Writer",
 ]
-
-# Names in __all__ with no definition:
-#   BytesIO
-#   EmptyStructMarker
-#   MDTYPES
-#   MatFile5Reader
-#   MatFile5Writer
-#   MatFileReader
-#   MatReadError
-#   MatReadWarning
-#   MatWriteError
-#   MatlabFunction
-#   MatlabObject
-#   NDT_ARRAY_FLAGS
-#   NDT_FILE_HDR
-#   NDT_TAG_FULL
-#   NDT_TAG_SMALL
-#   NP_TO_MTYPES
-#   NP_TO_MXTYPES
-#   VarReader5
-#   VarWriter5
-#   ZlibInputStream
-#   arr_dtype_number
-#   arr_to_chars
-#   docfiller
-#   mat_struct
-#   matdims
-#   mclass_info
-#   miCOMPRESSED
-#   miINT8
-#   miMATRIX
-#   miUINT32
-#   miUTF8
-#   mxCELL_CLASS
-#   mxCHAR_CLASS
-#   mxDOUBLE_CLASS
-#   mxOBJECT_CLASS
-#   mxSPARSE_CLASS
-#   mxSTRUCT_CLASS
-#   native_code
-#   read_dtype
-#   swapped_code
-#   to_writeable
-#   varmats_from_mat

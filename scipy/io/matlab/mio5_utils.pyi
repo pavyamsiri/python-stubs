@@ -1,3 +1,14 @@
+from ._mio5_utils import (
+    VarHeader5,
+    VarReader5,
+    byteswap_u4,
+    chars_to_strings,
+    csc_matrix,
+    mio5p,
+    swapped_code,
+    squeeze_element,
+)
+
 __all__ = [
     "VarHeader5",
     "VarReader5",
@@ -5,18 +16,6 @@ __all__ = [
     "chars_to_strings",
     "csc_matrix",
     "mio5p",
-    "pycopy",
     "swapped_code",
     "squeeze_element",
 ]
-
-# Names in __all__ with no definition:
-#   VarHeader5
-#   VarReader5
-#   byteswap_u4
-#   chars_to_strings
-#   csc_matrix
-#   mio5p
-#   pycopy
-#   squeeze_element
-#   swapped_code

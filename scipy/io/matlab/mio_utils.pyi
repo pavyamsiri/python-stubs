@@ -1,5 +1,3 @@
-__all__ = ["squeeze_element", "chars_to_strings"]
+from ._mio_utils import squeeze_element, chars_to_strings
 
-# Names in __all__ with no definition:
-#   chars_to_strings
-#   squeeze_element
+__all__ = ["squeeze_element", "chars_to_strings"]
