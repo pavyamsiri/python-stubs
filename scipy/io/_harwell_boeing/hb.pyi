@@ -1,6 +1,17 @@
-from _typeshed import Incomplete
+from typing import Any, Protocol
 
-__all__ = ["MalformedHeader", "hb_read", "hb_write", "HBInfo", "HBFile", "HBMatrixType"]
+from _typeshed import FileDescriptorOrPath
+from scipy.sparse import csc_matrix
+from scipy.sparse._base import _spbase as SparseMatrix  # type: ignore[private]
+from typing_extensions import Self
+
+from ._fortran_format_parser import ExpFormat, IntFormat
+
+class FileLike(Protocol):
+    def readline(self, size: int = -1, /) -> str: ...
+
+class Readable(Protocol):
+    def read(self, size: int | None = ..., /) -> str: ...
 
 class MalformedHeader(Exception): ...
 class LineOverflow(Warning): ...
@@ -9,78 +20,88 @@ class HBInfo:
     @classmethod
     def from_data(
         cls,
-        m,
-        title: str = "Default title",
-        key: str = "0",
-        mxtype: Incomplete | None = None,
-        fmt: Incomplete | None = None,
-    ): ...
+        m: SparseMatrix,
+        title: str = ...,
+        key: str = ...,
+        mxtype: HBMatrixType | None = ...,
+        fmt: Any | None = ...,
+    ) -> HBInfo: ...
     @classmethod
-    def from_file(cls, fid): ...
-    title: Incomplete
-    key: Incomplete
-    total_nlines: Incomplete
-    pointer_nlines: Incomplete
-    indices_nlines: Incomplete
-    values_nlines: Incomplete
-    pointer_format: Incomplete
-    indices_format: Incomplete
-    values_format: Incomplete
-    pointer_dtype: Incomplete
-    indices_dtype: Incomplete
-    values_dtype: Incomplete
-    pointer_nbytes_full: Incomplete
-    indices_nbytes_full: Incomplete
-    values_nbytes_full: Incomplete
-    nrows: Incomplete
-    ncols: Incomplete
-    nnon_zeros: Incomplete
-    nelementals: Incomplete
-    mxtype: Incomplete
+    def from_file(cls, fid: FileLike) -> Self: ...
+
+    title: str
+    key: str
+    total_nlines: int
+    pointer_nlines: int
+    indices_nlines: int
+    values_nlines: int
+    pointer_format: ExpFormat | IntFormat
+    indices_format: ExpFormat | IntFormat
+    values_format: ExpFormat | IntFormat
+    pointer_dtype: type
+    indices_dtype: type
+    values_dtype: type
+    pointer_nbytes_full: int
+    indices_nbytes_full: int
+    values_nbytes_full: int
+    nrows: str
+    ncols: str
+    nnon_zeros: int
+    nelementals: int
+    mxtype: HBMatrixType
+
     def __init__(
         self,
-        title,
-        key,
-        total_nlines,
-        pointer_nlines,
-        indices_nlines,
-        values_nlines,
-        mxtype,
-        nrows,
-        ncols,
-        nnon_zeros,
-        pointer_format_str,
-        indices_format_str,
-        values_format_str,
-        right_hand_sides_nlines: int = 0,
-        nelementals: int = 0,
+        title: str | None,
+        key: str | None,
+        total_nlines: int,
+        pointer_nlines: int,
+        indices_nlines: int,
+        values_nlines: int,
+        mxtype: HBMatrixType,
+        nrows: int,
+        ncols: int,
+        nnon_zeros: int,
+        pointer_format_str: str,
+        indices_format_str: str,
+        values_format_str: str,
+        right_hand_sides_nlines: int = ...,
+        nelementals: int = ...,
     ) -> None: ...
-    def dump(self): ...
+    def dump(self) -> str: ...
 
 class HBMatrixType:
     @classmethod
-    def from_fortran(cls, fmt): ...
-    value_type: Incomplete
-    structure: Incomplete
-    storage: Incomplete
-    def __init__(self, value_type, structure, storage: str = "assembled") -> None: ...
+    def from_fortran(cls, fmt: str) -> Self: ...
+
+    value_type: str
+    structure: str
+    storage: str
+
+    def __init__(self, value_type: str, structure: str, storage: str = ...) -> None: ...
     @property
-    def fortran_format(self): ...
+    def fortran_format(self) -> str: ...
 
 class HBFile:
-    def __init__(self, file, hb_info: Incomplete | None = None) -> None: ...
+    def __init__(self, file: FileLike, hb_info: HBInfo | None = ...) -> None: ...
     @property
-    def title(self): ...
+    def title(self) -> str: ...
     @property
-    def key(self): ...
+    def key(self) -> str: ...
     @property
-    def type(self): ...
+    def type(self) -> str: ...
     @property
-    def structure(self): ...
+    def structure(self) -> str: ...
     @property
-    def storage(self): ...
-    def read_matrix(self): ...
-    def write_matrix(self, m): ...
+    def storage(self) -> str: ...
+    def read_matrix(self) -> csc_matrix: ...
+    def write_matrix(self, m: SparseMatrix) -> None: ...
 
-def hb_read(path_or_open_file): ...
-def hb_write(path_or_open_file, m, hb_info: Incomplete | None = None): ...
+def hb_read(path_or_open_file: FileDescriptorOrPath | Readable) -> csc_matrix: ...
+def hb_write(
+    path_or_open_file: FileDescriptorOrPath | Readable,
+    m: SparseMatrix,
+    hb_info: HBInfo | None = ...,
+) -> None: ...
+
+__all__ = ["MalformedHeader", "hb_read", "hb_write", "HBInfo", "HBFile", "HBMatrixType"]
