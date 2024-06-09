@@ -1,59 +1,67 @@
-from _typeshed import Incomplete
+from re import Pattern
 
-__all__ = ["BadFortranFormat", "FortranFormatParser", "IntFormat", "ExpFormat"]
+from _typeshed import Incomplete
+from typing_extensions import Self
 
 class BadFortranFormat(SyntaxError): ...
 
 class IntFormat:
     @classmethod
-    def from_number(cls, n, min: Incomplete | None = None): ...
-    width: Incomplete
-    repeat: Incomplete
-    min: Incomplete
+    def from_number(cls, n: int, min: int | None = ...) -> Self: ...
+
+    width: int
+    repeat: int
+    min: int
+
     def __init__(
-        self, width, min: Incomplete | None = None, repeat: Incomplete | None = None
+        self, width: int, min: int | None = ..., repeat: int | None = ...
     ) -> None: ...
     @property
-    def fortran_format(self): ...
+    def fortran_format(self) -> str: ...
     @property
-    def python_format(self): ...
+    def python_format(self) -> str: ...
 
 class ExpFormat:
     @classmethod
-    def from_number(cls, n, min: Incomplete | None = None): ...
-    width: Incomplete
-    significand: Incomplete
-    repeat: Incomplete
-    min: Incomplete
+    def from_number(cls, n: float, min: int | None = ...) -> Self: ...
+
+    width: int
+    significand: int
+    min: int | None
+    repeat: int | None
+
     def __init__(
         self,
-        width,
-        significand,
-        min: Incomplete | None = None,
-        repeat: Incomplete | None = None,
+        width: int,
+        significand: int,
+        min: int | None = ...,
+        repeat: int | None = ...,
     ) -> None: ...
     @property
-    def fortran_format(self): ...
+    def fortran_format(self) -> str: ...
     @property
-    def python_format(self): ...
+    def python_format(self) -> str: ...
 
 class Token:
-    type: Incomplete
-    value: Incomplete
-    pos: Incomplete
-    def __init__(self, type, value, pos) -> None: ...
+    type: str
+    value: str
+    pos: int
+    def __init__(self, type: str, value: str, pos: int) -> None: ...
 
 class Tokenizer:
-    tokens: Incomplete
-    res: Incomplete
-    def __init__(self) -> None: ...
-    data: Incomplete
+    tokens: list[str]
+    res: list[Pattern[str]]
+    data: str
     curpos: int
-    len: Incomplete
-    def input(self, s) -> None: ...
-    def next_token(self): ...
+    len: int
+
+    def __init__(self) -> None: ...
+    def input(self, s: str) -> None: ...
+    def next_token(self) -> Token: ...
 
 class FortranFormatParser:
     tokenizer: Incomplete
     def __init__(self) -> None: ...
-    def parse(self, s): ...
+    def parse(self, s: str) -> ExpFormat | IntFormat: ...
+
+__all__ = ["BadFortranFormat", "FortranFormatParser", "IntFormat", "ExpFormat"]
