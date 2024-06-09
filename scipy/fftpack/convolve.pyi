@@ -1,0 +1,8 @@
+import _cython_3_0_10
+from scipy.fft._pocketfft.pypocketfft import r2r_fftpack as r2r_fftpack
+
+__test__: dict
+convolve: _cython_3_0_10.cython_function_or_method
+convolve_z: _cython_3_0_10.cython_function_or_method
+destroy_convolve_cache: _cython_3_0_10.cython_function_or_method
+init_convolution_kernel: _cython_3_0_10.cython_function_or_method

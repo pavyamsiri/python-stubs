@@ -1,0 +1,9 @@
+import _cython_3_0_10
+
+__test__: dict
+evaluate: _cython_3_0_10.fused_cython_function
+evaluate_bernstein: _cython_3_0_10.fused_cython_function
+evaluate_nd: _cython_3_0_10.fused_cython_function
+fix_continuity: _cython_3_0_10.fused_cython_function
+integrate: _cython_3_0_10.fused_cython_function
+real_roots: _cython_3_0_10.cython_function_or_method

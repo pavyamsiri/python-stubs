@@ -1,0 +1,7 @@
+import _cython_3_0_10
+
+__test__: dict
+evaluate_all_bspl: _cython_3_0_10.cython_function_or_method
+evaluate_ndbspline: _cython_3_0_10.fused_cython_function
+evaluate_spline: _cython_3_0_10.fused_cython_function
+insert: _cython_3_0_10.fused_cython_function

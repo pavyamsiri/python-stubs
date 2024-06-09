@@ -1,0 +1,10 @@
+import _cython_3_0_10
+from scipy.sparse.csgraph._tools import reconstruct_path as reconstruct_path
+from scipy.sparse.csgraph._validation import validate_graph as validate_graph
+
+__test__: dict
+breadth_first_order: _cython_3_0_10.cython_function_or_method
+breadth_first_tree: _cython_3_0_10.cython_function_or_method
+connected_components: _cython_3_0_10.cython_function_or_method
+depth_first_order: _cython_3_0_10.cython_function_or_method
+depth_first_tree: _cython_3_0_10.cython_function_or_method

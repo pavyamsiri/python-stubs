@@ -1,0 +1,6 @@
+import _cython_3_0_10
+
+__test__: dict
+qr_delete: _cython_3_0_10.cython_function_or_method
+qr_insert: _cython_3_0_10.cython_function_or_method
+qr_update: _cython_3_0_10.cython_function_or_method

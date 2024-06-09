@@ -1,0 +1,12 @@
+import _cython_3_0_10
+import scipy as scipy
+from scipy.linalg._basic import solve_triangular as solve_triangular
+
+__pyx_capi__: dict
+__test__: dict
+gaussian_kernel_estimate: _cython_3_0_10.fused_cython_function
+gaussian_kernel_estimate_log: _cython_3_0_10.fused_cython_function
+genhyperbolic_logpdf: _cython_3_0_10.cython_function_or_method
+genhyperbolic_pdf: _cython_3_0_10.cython_function_or_method
+geninvgauss_logpdf: _cython_3_0_10.cython_function_or_method
+von_mises_cdf: _cython_3_0_10.cython_function_or_method
