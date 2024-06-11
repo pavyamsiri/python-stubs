@@ -3,12 +3,12 @@ from typing import Any, Literal
 
 from numpy import int32
 from numpy.typing import ArrayLike, NDArray
-from scipy._lib._util import _RichResult
+from scipy.optimize import OptimizeResult
 from scipy.optimize._constraints import Bounds
 from scipy.sparse._base import _spbase as SparseMatrix
 from scipy.sparse.linalg import LinearOperator
 
-class OptimizeResult(_RichResult):
+class LeastSquaresOptimizeResult(OptimizeResult):
     x: NDArray[Any]
     cost: float
     fun: NDArray[Any]
@@ -60,4 +60,4 @@ def least_squares(
     verbose: Literal[0, 1, 2] = ...,
     args: Iterable[Any] = ...,
     kwargs: dict[str, Any] = ...,
-) -> OptimizeResult: ...
+) -> LeastSquaresOptimizeResult: ...
