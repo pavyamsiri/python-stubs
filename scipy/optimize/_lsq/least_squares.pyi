@@ -1,11 +1,11 @@
 from collections.abc import Callable, Iterable
 from typing import Any, Literal
-from scipy.sparse._base import _spbase as SparseMatrix
-from numpy import int32
 
+from numpy import int32
 from numpy.typing import ArrayLike, NDArray
-from scipy.optimize._constraints import Bounds
 from scipy._lib._util import _RichResult
+from scipy.optimize._constraints import Bounds
+from scipy.sparse._base import _spbase as SparseMatrix
 from scipy.sparse.linalg import LinearOperator
 
 class OptimizeResult(_RichResult):
