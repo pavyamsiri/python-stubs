@@ -1,22 +1,29 @@
-from .common import (
-    EPS as EPS,
-    in_bounds as in_bounds,
-    make_strictly_feasible as make_strictly_feasible,
-)
-from .dogbox import dogbox as dogbox
-from .trf import trf as trf
-from _typeshed import Incomplete
-from scipy.optimize import OptimizeResult as OptimizeResult
-from scipy.optimize._minimize import Bounds as Bounds
-from scipy.optimize._numdiff import (
-    approx_derivative as approx_derivative,
-    group_columns as group_columns,
-)
-from scipy.sparse import issparse as issparse
-from scipy.sparse.linalg import LinearOperator as LinearOperator
+from collections.abc import Callable, Iterable
+from typing import Any, Literal
+from scipy.sparse._base import _spbase as SparseMatrix
+from numpy import int32
 
-TERMINATION_MESSAGES: Incomplete
-FROM_MINPACK_TO_COMMON: Incomplete
+from numpy.typing import ArrayLike, NDArray
+from scipy.optimize._constraints import Bounds
+from scipy._lib._util import _RichResult
+from scipy.sparse.linalg import LinearOperator
+
+class OptimizeResult(_RichResult):
+    x: NDArray[Any]
+    cost: float
+    fun: NDArray[Any]
+    jac: NDArray[Any] | SparseMatrix | LinearOperator
+    grad: NDArray[Any]
+    optimality: float
+    active_mask: NDArray[int32]
+    nfev: int
+    njev: int
+    status: Literal[-1, 0, 1, 2, 3, 4]
+    message: str
+    success: bool
+
+TERMINATION_MESSAGES: dict[int, str]
+FROM_MINPACK_TO_COMMON: dict[int, int]
 
 def call_minpack(fun, x0, jac, ftol, xtol, gtol, max_nfev, x_scale, diff_step): ...
 def prepare_bounds(bounds, n): ...
@@ -28,27 +35,29 @@ def soft_l1(z, rho, cost_only) -> None: ...
 def cauchy(z, rho, cost_only) -> None: ...
 def arctan(z, rho, cost_only) -> None: ...
 
-IMPLEMENTED_LOSSES: Incomplete
+# z, rho, cost_only
+IMPLEMENTED_LOSSES: dict[str, Callable[..., Any] | None]
 
 def construct_loss_function(m, loss, f_scale): ...
 def least_squares(
-    fun,
-    x0,
-    jac: str = "2-point",
-    bounds=...,
-    method: str = "trf",
-    ftol: float = 1e-08,
-    xtol: float = 1e-08,
-    gtol: float = 1e-08,
-    x_scale: float = 1.0,
-    loss: str = "linear",
-    f_scale: float = 1.0,
-    diff_step: Incomplete | None = None,
-    tr_solver: Incomplete | None = None,
-    tr_options={},
-    jac_sparsity: Incomplete | None = None,
-    max_nfev: Incomplete | None = None,
-    verbose: int = 0,
-    args=(),
-    kwargs={},
-): ...
+    fun: Callable[..., NDArray[Any]],
+    x0: ArrayLike,
+    jac: Literal["2-point", "3-point", "cs"] | Callable[..., NDArray[Any]] = ...,
+    bounds: tuple[ArrayLike, ArrayLike] | Bounds = ...,
+    method: Literal["trf", "dogbox", "lm"] = ...,
+    ftol: float | None = ...,
+    xtol: float | None = ...,
+    gtol: float | None = ...,
+    x_scale: ArrayLike | Literal["jac"] = ...,
+    loss: Literal["linear", "soft_l1", "huber", "cauchy", "arctan"]
+    | Callable[[NDArray[Any]], NDArray[Any]] = ...,
+    f_scale: float = ...,
+    diff_step: ArrayLike | None = ...,
+    tr_solver: Literal["exact", "lsmr"] | None = ...,
+    tr_options: dict[str, Any] = ...,
+    jac_sparsity: ArrayLike | SparseMatrix | None = ...,
+    max_nfev: int | None = ...,
+    verbose: Literal[0, 1, 2] = ...,
+    args: Iterable[Any] = ...,
+    kwargs: dict[str, Any] = ...,
+) -> OptimizeResult: ...
