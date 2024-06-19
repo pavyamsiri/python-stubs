@@ -1,7 +1,9 @@
 from _typeshed import Incomplete
-from typing import NamedTuple
+from typing import NamedTuple, Literal
 
-__all__ = ["binned_statistic", "binned_statistic_2d", "binned_statistic_dd"]
+from collections.abc import Callable, Iterable
+from numpy import float64, int64
+from numpy.typing import ArrayLike, NDArray
 
 class BinnedStatisticResult(NamedTuple):
     statistic: Incomplete
@@ -19,14 +21,15 @@ class BinnedStatistic2dResult(NamedTuple):
     binnumber: Incomplete
 
 def binned_statistic_2d(
-    x,
-    y,
-    values,
-    statistic: str = "mean",
-    bins: int = 10,
-    range: Incomplete | None = None,
-    expand_binnumbers: bool = False,
-): ...
+    x: ArrayLike,
+    y: ArrayLike,
+    values: ArrayLike | Iterable[ArrayLike],
+    statistic: Literal["mean", "std", "median", "count", "sum", "min", "max"]
+    | Callable[[ArrayLike], float] = ...,
+    bins: int | tuple[int, int] | ArrayLike | tuple[ArrayLike, ArrayLike] = ...,
+    range: ArrayLike = ...,
+    expand_binnumbers: bool = ...,
+) -> tuple[NDArray[float64], NDArray[float64], NDArray[float64], NDArray[int64]]: ...
 
 class BinnedStatisticddResult(NamedTuple):
     statistic: Incomplete
@@ -42,3 +45,5 @@ def binned_statistic_dd(
     expand_binnumbers: bool = False,
     binned_statistic_result: Incomplete | None = None,
 ): ...
+
+__all__ = ["binned_statistic", "binned_statistic_2d", "binned_statistic_dd"]
