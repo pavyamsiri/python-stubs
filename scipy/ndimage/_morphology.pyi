@@ -1,4 +1,8 @@
 from _typeshed import Incomplete
+from collections.abc import Iterable
+from typing import overload, Literal
+from numpy import float64, int32
+from numpy.typing import ArrayLike, NDArray
 
 __all__ = [
     "iterate_structure",
@@ -184,11 +188,84 @@ def distance_transform_cdt(
     distances: Incomplete | None = None,
     indices: Incomplete | None = None,
 ): ...
+@overload
 def distance_transform_edt(
-    input,
-    sampling: Incomplete | None = None,
-    return_distances: bool = True,
-    return_indices: bool = False,
-    distances: Incomplete | None = None,
-    indices: Incomplete | None = None,
-): ...
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[False] = ...,
+    return_indices: Literal[False] = ...,
+    distances: NDArray[float64] | None = ...,
+    indices: NDArray[int32] | None = ...,
+) -> None: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[False] = ...,
+    distances: None = ...,
+    indices: NDArray[int32] | None = ...,
+) -> NDArray[float64]: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[False] = ...,
+    distances: NDArray[float64] = ...,
+    indices: NDArray[int32] | None = ...,
+) -> None: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[False] = ...,
+    return_indices: Literal[True] = ...,
+    distances: NDArray[float64] | None = ...,
+    indices: None = ...,
+) -> NDArray[int32]: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[False] = ...,
+    return_indices: Literal[True] = ...,
+    distances: NDArray[float64] | None = ...,
+    indices: NDArray[int32] = ...,
+) -> None: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[True] = ...,
+    distances: None = ...,
+    indices: None = ...,
+) -> tuple[NDArray[float64], NDArray[int32]]: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[True] = ...,
+    distances: NDArray[float64] = ...,
+    indices: None = ...,
+) -> NDArray[int32]: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[True] = ...,
+    distances: None = ...,
+    indices: NDArray[int32] = ...,
+) -> NDArray[float64]: ...
+@overload
+def distance_transform_edt(
+    input: ArrayLike,
+    sampling: float | Iterable[float] | None = ...,
+    return_distances: Literal[True] = ...,
+    return_indices: Literal[True] = ...,
+    distances: NDArray[float64] = ...,
+    indices: NDArray[int32] = ...,
+) -> None: ...
